@@ -1,0 +1,580 @@
+{{ 'section-product-info-columns.min.css' | asset_url | stylesheet_tag }}
+
+<section
+	data-wetheme-section-type="template--product--info-columns"
+	data-wetheme-section-id="{{ section.id }}"
+	data-slides-per-row="{{ section.settings.columns_per_row }}"
+	class="homepage-sections-wrapper homepage-sections-wrapper--{{ section.settings.colors }} info-cols"
+>
+	<div class="wrapper-padded">
+
+		{% if section.settings.heading != blank or section.settings.description != blank %}
+			<div class="info-cols__header">
+			  {% if section.settings.heading != blank %}
+				<h2 class="homepage-sections--title">{{ section.settings.heading | escape }}</h2>
+			  {% endif %}
+			  {% if section.settings.description != blank %}
+				<div class="rte homepage-sections--description">{{ section.settings.description }}</div>
+			  {% endif %}
+			</div>
+		  {% endif %}
+
+		<div class="swiper-container text-{{ section.settings.text_alignment }}">
+			<div class="swiper-wrapper vertical-align--{{ section.settings.vertical_alignment }}">
+				{% for block in section.blocks %}
+
+					<div class="info-cols--{{ block.type }}-column grid__item swiper-slide" {{ block.shopify_attributes }}>
+						{% case block.type %}
+							{% when 'image_and_text' %}
+
+								{%- liquid 
+									if block.settings.image.alt != blank 
+										assign alt = block.settings.image.alt
+									elsif block.settings.heading != blank 
+										assign alt = block.settings.heading
+									else
+										assign alt = shop.name
+									endif
+								-%}
+							
+								{% if block.settings.button_link != blank %}
+									<a aria-label="{{ alt }}" href="{{ block.settings.button_link }}" class="info-cols--image-is-link"><span class="sr-only">{{ alt }}</span>
+								{% endif %}
+
+								<div class="info-cols--image" aria-hidden="true">
+									{% if block.settings.image == blank %}
+										{{ 'image' | placeholder_svg_tag: 'icon--placeholder' }}
+									{% else %}
+										{% render 'responsive-image' with block.settings.image, alt: alt, allow_stretch: true %}
+									{% endif %}
+								</div>
+
+								{% if block.settings.button_link != blank %}
+									</a>
+								{% endif %}
+
+								{% if block.settings.heading != '' %}
+									<h3 class="info-cols--title">{{ block.settings.heading }}</h3>
+								{% endif %}
+
+								{% if block.settings.text != '' %}
+									<div class="info-cols--text">{{ block.settings.text }}</div>
+								{% endif %}
+
+								{% if block.settings.button_text != '' and block.settings.button_link != blank %}
+									<div class="info-cols--link--wrapper">
+										<a href="{{ block.settings.button_link }}" class="info-cols--link_text">{{ block.settings.button_text }}</a>
+									</div>
+								{% endif %}
+
+							{% when 'video_and_text' %}
+
+								{% assign type = 'mp4' %}
+								{% if block.settings.video_url contains "youtube.com" %}
+									{% assign type = 'youtube' %}
+								{% elsif block.settings.video_url contains "youtu.be" %}
+									{% assign type = 'youtube' %}
+								{% elsif block.settings.video_url contains "vimeo.com" %}
+									{% assign type = 'vimeo' %}
+								{% else %}
+									<link rel="preload" href="{{ 'plyr.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+									<noscript>{{ 'plyr.min.css' | asset_url | stylesheet_tag }}</noscript>
+								{% endif %}
+							
+								{% if block.settings.button_link != blank %}
+									<a aria-label="{{ alt }}" href="{{ block.settings.button_link }}" class="info-cols--image-is-link"><span class="sr-only">{{ alt }}</span>
+								{% endif %}
+
+								<div class="info-cols--video type-{{ type }}" aria-hidden="true">
+									<wetheme-video
+										section-id="{{ block.id }}"
+										v-bind:hero="false"
+										video-type="{{ type }}"
+										url="{{ block.settings.video_url }}"
+										v-bind:autoplay="true"
+										v-bind:loop="true"
+										v-bind:mute="true"
+										v-bind:hide-controls="true"
+										v-bind:overlay="true"
+									>
+									</wetheme-video>
+								</div>
+
+								{% if block.settings.button_link != blank %}
+									</a>
+								{% endif %}
+
+								{% if block.settings.heading != '' %}
+									<h3 class="info-cols--title">{{ block.settings.heading }}</h3>
+								{% endif %}
+
+								{% if block.settings.text != '' %}
+									<div class="info-cols--text">{{ block.settings.text }}</div>
+								{% endif %}
+
+								{% if block.settings.button_text != '' and block.settings.button_link != blank %}
+									<div class="info-cols--link--wrapper">
+										<a href="{{ block.settings.button_link }}" class="info-cols--link_text">{{ block.settings.button_text }}</a>
+									</div>
+								{% endif %}
+
+							{% when 'text' %}
+							
+								{% if block.settings.button_text == '' and block.settings.button_link != blank %}
+									<a href="{{ block.settings.button_link }}">
+								{% endif %}
+
+								{% if block.settings.heading != '' %}
+									<h3 class="info-cols--title">{{ block.settings.heading }}</h3>
+								{% endif %}
+
+								{% if block.settings.text != '' %}
+									<div class="info-cols--text">{{ block.settings.text }}</div>
+								{% endif %}
+
+								{% if block.settings.button_text == '' and block.settings.button_link != blank %}
+									</a>
+								{% endif %}
+
+								{% if block.settings.button_text != '' and block.settings.button_link != blank %}
+									<div class="info-cols--link--wrapper">
+										<a href="{{ block.settings.button_link }}" class="info-cols--link_text">{{ block.settings.button_text }}</a>
+									</div>
+								{% endif %}
+
+						{% endcase %}
+					</div>
+
+				{% endfor %}
+			</div>
+
+			{% if section.blocks.size > section.settings.columns_per_row %}	
+				<div class="swiper-pagination"></div>
+			{% endif %}
+
+			{% if section.blocks.size == 0 %}
+				<div class="placeholder-noblocks">
+					{{ 'general.onboarding.no_content' | t }}
+				</div>
+			{% endif %}
+
+		</div>
+
+		{% if section.blocks.size > section.settings.columns_per_row %}
+			<div class="swiper-navigation swiper-button--prev">
+				{% render 'theme-icon', icon: 'chevron_left', iconClasses: 'chevron-left', widthUnset: true, iconAttributes: 'style="max-height:18px;"' %}
+			</div>
+			<div class="swiper-navigation swiper-button--next">
+				{% render 'theme-icon', icon: 'chevron_right', iconClasses: 'chevron-right', widthUnset: true, iconAttributes: 'style="max-height:18px;"' %}
+			</div>
+		{% endif %}
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": {
+		"en": "Info columns",
+		"de": "Info columns",
+		"es": "Info columns",
+		"fr": "Info columns",
+		"pt-PT": "Info columns"
+	},
+	"class": "product-section--info-columns show-on-scroll",
+	"settings": [
+	  {
+		"type": "select",
+		"id": "colors",
+		"label": {
+			"en": "Color scheme",
+			"de": "Farbschema",
+			"es": "Esquema de colores",
+			"fr": "Palette de couleurs",
+			"pt-PT": "Esquema de cores"
+		},
+		"default": "white",
+		"options": [
+			{
+				"value": "white",
+				"label": {
+					"en": "Minimal",
+					"fr": "Minimal",
+					"de": "Minimal",
+					"es": "Mínimo",
+					"pt-PT": "Mínimo"
+				}
+			},
+			{
+				"value": "light",
+				"label": {
+					"en": "Light",
+					"de": "Licht",
+					"es": "Luz",
+					"fr": "Clair",
+					"pt-PT": "Claro"
+				}
+			},
+			{
+				"value": "accent",
+				"label": {
+					"en": "Feature",
+					"de": "Eigenschaft",
+					"es": "Destacado",
+					"fr": "Caractéristique",
+					"pt-PT": "Funcionalidade"
+				}
+			},
+			{
+				"value": "dark",
+				"label": {
+					"en": "Dark",
+					"de": "Dunkel",
+					"es": "Oscuro",
+					"fr": "Foncé",
+					"pt-PT": "Escuro"
+				}
+			}
+		]
+	  },
+	  {
+		"type": "text",
+		"id": "heading",
+		"label": {
+			"en": "Heading",
+			"de": "Überschrift",
+			"es": "Encabezado",
+			"fr": "Rubrique",
+			"pt-PT": "Título"
+		},
+		"default": "Info columns"
+	  },
+	  {
+		"type": "richtext",
+		"id": "description",
+		"label": {
+			"en": "Description",
+			"de": "Beschreibung",
+			"es": "Descripción",
+			"fr": "Description",
+			"pt-PT": "Descrição"
+		},
+		"default": "<p>Emphasise your messaging</p>"
+	  },
+	  {
+		"type": "range",
+		"id": "columns_per_row",
+		"min": 1,
+		"max": 4,
+		"step": 1,
+		"label": {
+			"en": "Columns per row on desktop",
+			"de": "Spalten pro Zeile auf dem Desktop",
+			"es": "Columnas por fila en escritorio",
+			"fr": "Colonnes par ligne sur le bureau",
+			"pt-PT": "Colunas por linha no Desktop"
+		},
+		"default": 3
+	  },
+	  {
+		"type": "radio",
+		"id": "text_alignment",
+		"label": "Text alignment",
+		"options": [
+		  {
+			"value": "left",
+			"label": "Left"
+		  },
+		  {
+			"value": "center",
+			"label": "Center"
+		  },
+		  {
+			"value": "right",
+			"label": "Right"
+		  }
+		],
+		"default": "center"
+	  },
+	  {
+		"type": "radio",
+		"id": "vertical_alignment",
+		"label": "Vertical alignment",
+		"options": [
+		  {
+			"value": "top",
+			"label": "Top"
+		  },
+		  {
+			"value": "center",
+			"label": "Center"
+		  },
+		  {
+			"value": "bottom",
+			"label": "Bottom"
+		  }
+		],
+		"default": "top"
+	  }
+	],
+	"blocks": [
+		{
+			"type": "image_and_text",
+			"name": "Image and text",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": {
+						"en": "Image",
+						"de": "Bild",
+						"es": "Imagen",
+						"fr": "Image",
+						"pt-PT": "Imagem"
+					}
+				},
+				{
+					"type": "text",
+					"id": "heading",
+					"label": {
+						"en": "Heading",
+						"de": "Überschrift",
+						"es": "Encabezado",
+						"fr": "Rubrique",
+						"pt-PT": "Título"
+					},
+					"default": {
+						"en": "Heading",
+						"de": "Überschrift",
+						"es": "Encabezado",
+						"fr": "Rubrique",
+						"pt-PT": "Título"
+					}
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": {
+						"en": "Text",
+						"de": "Text",
+						"es": "Texto",
+						"fr": "Text",
+						"pt-PT": "Text"
+					},
+					"default": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": {
+						"en": "Button text",
+						"de": "Buttontext",
+						"es": "Texto del botón",
+						"fr": "Texte des boutons",
+						"pt-PT": "Texto do botão"
+					},
+					"info": {
+						"en": "Required to show the button",
+						"de": "Notwendig, den Button zu zeigen",
+						"es": "Es necesario mostrar el botón",
+						"fr": "Requis pour afficher le bouton",
+						"pt-PT": "Necessário para exibir o botão"
+					},
+					"default": "Learn more"
+				},
+				{
+					"type": "url",
+					"id": "button_link",
+					"label": {
+						"en": "Button link",
+						"de": "Buttonlink",
+						"es": "Enlace del botón",
+						"fr": "Lien du bouton",
+						"pt-PT": "Ligação do botão"
+					},
+					"default": "/collections/all"
+				}
+			]
+		},
+		{
+			"type": "video_and_text",
+			"name": "Video and text",
+			"settings": [
+				{
+					"type": "text",
+					"id": "video_url",
+					"label": "Video",
+					"info": {
+						"en": "Accepts YouTube, Vimeo and MP4. Video will be muted and some devices may prevent autoplay. [Learn more](https://support.eightthemes.com/hc/en-us/articles/360020109497-Product-Media#heading-2)",
+						"de": "Akzeptiert YouTube, Vimeo und MP4. Das Video wird stumm geschaltet, und einige Geräte verhindern möglicherweise die automatische Wiedergabe. [Mehr erfahren](https://support.eightthemes.com/hc/en-us/articles/360020109497-Product-Media#heading-2)",
+						"es": "Acepta YouTube, Vimeo y MP4. El vídeo se silenciará y algunos dispositivos pueden evitar la reproducción automática. [Más información](https://support.eightthemes.com/hc/en-us/articles/360020109497-Product-Media#heading-2)",
+						"fr": "Accepte YouTube, Vimeo et MP4. Le son de la vidéo sera désactivé et certains appareils peuvent empêcher la lecture automatique. [En savoir plus](https://support.eightthemes.com/hc/en-us/articles/360020109497-Product-Media#heading-2)",
+						"pt-PT": "Aceita YouTube, Vimeo e MP4. O vídeo será silenciado e alguns dispositivos podem impedir a reprodução automática. [Saber mais](https://support.eightthemes.com/hc/en-us/articles/360020109497-Product-Media#heading-2)"
+					},
+					"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+				},
+				{
+					"type": "text",
+					"id": "heading",
+					"label": {
+						"en": "Heading",
+						"de": "Überschrift",
+						"es": "Encabezado",
+						"fr": "Rubrique",
+						"pt-PT": "Título"
+					},
+					"default": {
+						"en": "Heading",
+						"de": "Überschrift",
+						"es": "Encabezado",
+						"fr": "Rubrique",
+						"pt-PT": "Título"
+					}
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": {
+						"en": "Text",
+						"de": "Text",
+						"es": "Texto",
+						"fr": "Text",
+						"pt-PT": "Text"
+					},
+					"default": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": {
+						"en": "Button text",
+						"de": "Buttontext",
+						"es": "Texto del botón",
+						"fr": "Texte des boutons",
+						"pt-PT": "Texto do botão"
+					},
+					"info": {
+						"en": "Required to show the button",
+						"de": "Notwendig, den Button zu zeigen",
+						"es": "Es necesario mostrar el botón",
+						"fr": "Requis pour afficher le bouton",
+						"pt-PT": "Necessário para exibir o botão"
+					},
+					"default": "Learn more"
+				},
+				{
+					"type": "url",
+					"id": "button_link",
+					"label": {
+						"en": "Button link",
+						"de": "Buttonlink",
+						"es": "Enlace del botón",
+						"fr": "Lien du bouton",
+						"pt-PT": "Ligação do botão"
+					},
+					"default": "/collections/all"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"name": "Text",
+			"settings": [
+				{
+					"type": "text",
+					"id": "heading",
+					"label": {
+						"en": "Heading",
+						"de": "Überschrift",
+						"es": "Encabezado",
+						"fr": "Rubrique",
+						"pt-PT": "Título"
+					},
+					"default": {
+						"en": "Heading",
+						"de": "Überschrift",
+						"es": "Encabezado",
+						"fr": "Rubrique",
+						"pt-PT": "Título"
+					}
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": {
+						"en": "Text",
+						"de": "Text",
+						"es": "Texto",
+						"fr": "Text",
+						"pt-PT": "Text"
+					},
+					"default": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": {
+						"en": "Button text",
+						"de": "Buttontext",
+						"es": "Texto del botón",
+						"fr": "Texte des boutons",
+						"pt-PT": "Texto do botão"
+					},
+					"info": {
+						"en": "Required to show the button",
+						"de": "Notwendig, den Button zu zeigen",
+						"es": "Es necesario mostrar el botón",
+						"fr": "Requis pour afficher le bouton",
+						"pt-PT": "Necessário para exibir o botão"
+					},
+					"default": "Learn more"
+				},
+				{
+					"type": "url",
+					"id": "button_link",
+					"label": {
+						"en": "Button link",
+						"de": "Buttonlink",
+						"es": "Enlace del botón",
+						"fr": "Lien du bouton",
+						"pt-PT": "Ligação do botão"
+					},
+					"default": "/collections/all"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": {
+				"en": "Info columns",
+				"de": "Info columns",
+				"es": "Info columns",
+				"fr": "Info columns",
+				"pt-PT": "Info columns"
+			},
+			"category": {
+				"en": "Image",
+				"de": "Bild",
+				"es": "Imagen",
+				"fr": "Image",
+				"pt-PT": "Imagem"
+			},
+			"blocks": [
+				{
+					"type": "image_and_text"
+				},
+				{
+					"type": "image_and_text"
+				},
+				{
+					"type": "video_and_text"
+				}
+			]
+		}
+	],
+	"disabled_on": {
+		"groups": ["header"]
+	}
+}
+{% endschema %}

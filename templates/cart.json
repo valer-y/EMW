@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "main": {
+      "type": "template--cart",
+      "settings": {
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "accent"
+      }
+    },
+    "featured-product": {
+      "type": "products--featured-product",
+      "settings": {
+        "product_variant_style": "dropdowns",
+        "hide_soldout_variants": false,
+        "show-giftwrap": false,
+        "show-vendor": false,
+        "show_product_description": false,
+        "show_quantity_selector": false,
+        "show_add_to_cart": true,
+        "show_smart_checkout": false,
+        "image-placement": "left",
+        "enable_video_loop": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "featured-product"
+  ]
+}

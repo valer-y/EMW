@@ -1,0 +1,256 @@
+{
+  "sections": {
+    "image-with-text-overlay": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image_height": "30vw",
+        "bg_image_overlay_opacity": 5,
+        "parallax": false,
+        "colors": "light",
+        "textPosition": "center",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "",
+        "button_label": "",
+        "button-text": "#ffffff",
+        "button-background": "#000000"
+      }
+    },
+    "gallery": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "Subheading",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "Subheading",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "Subheading",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-0",
+        "gallery-1",
+        "gallery-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "title": "",
+        "richtext": "",
+        "remove-spacing": false,
+        "full-width": false,
+        "section-width": "content",
+        "content-position": "below-image"
+      }
+    },
+    "main": {
+      "type": "template--page",
+      "disabled": true,
+      "settings": {
+        "page_width": "full-width"
+      }
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "accordion-0": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-1": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-2": {
+          "type": "tab_content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "accordion-0",
+        "accordion-1",
+        "accordion-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "faq_icon": "caret"
+      }
+    },
+    "accordion-1": {
+      "type": "accordion",
+      "blocks": {
+        "accordion-1-0": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-1-1": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-1-2": {
+          "type": "tab_content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "accordion-1-0",
+        "accordion-1-1",
+        "accordion-1-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "faq_icon": "caret"
+      }
+    },
+    "accordion-2": {
+      "type": "accordion",
+      "blocks": {
+        "accordion-2-0": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-2-1": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-2-2": {
+          "type": "tab_content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "accordion-2-0",
+        "accordion-2-1",
+        "accordion-2-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "faq_icon": "caret"
+      }
+    },
+    "gallery-1": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-1-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1-2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1-3": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-1-0",
+        "gallery-1-1",
+        "gallery-1-2",
+        "gallery-1-3"
+      ],
+      "settings": {
+        "colors": "white",
+        "title": "",
+        "richtext": "",
+        "remove-spacing": true,
+        "full-width": false,
+        "section-width": "full",
+        "content-position": "hide"
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "accent",
+        "button_label": "LEARN MORE",
+        "button_link": "shopify:\/\/collections"
+      }
+    }
+  },
+  "order": [
+    "image-with-text-overlay",
+    "gallery",
+    "main",
+    "accordion",
+    "accordion-1",
+    "accordion-2",
+    "gallery-1",
+    "rich-text"
+  ]
+}

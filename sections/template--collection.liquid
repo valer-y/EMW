@@ -1,0 +1,273 @@
+{%-liquid 
+  assign filtering_enabled = true
+  if section.settings.enable_filtering == false and section.settings.enable_sorting == false
+    assign filtering_enabled = false
+  endif 
+
+  assign header_enabled = true
+  if section.settings.enable_collection_title == false and section.settings.enable_collection_description == false
+    assign header_enabled = false
+  endif
+-%}
+
+<section class="shopify-section main-page-container wrapper-padded">
+  <div class="collection_grid{% if filtering_enabled %} filtering_enabled--{{ section.settings.desktop_position }}{% endif %}">
+
+    {% unless filtering_enabled == false and header_enabled == false %}
+      {% render 'main-collection-filtering-sorting' with 
+        collection: collection, 
+        classes: "grid-area--filtering",
+        desktop_position: section.settings.desktop_position,
+        enable_collection_title: section.settings.enable_collection_title,
+        enable_collection_description: section.settings.enable_collection_description,
+        enable_filtering: section.settings.enable_filtering,
+        enable_sorting: section.settings.enable_sorting
+      %}
+    {% endunless %}
+
+    {% render 'main-collection-grid' with 
+      classes: "grid-area--collection",
+      blocks: section.blocks,
+      desktop_products_per_row: section.settings.desktop-products-per-row,
+      tablet_products_per_row: section.settings.tablet-products-per-row,
+      mobile_products_per_row: section.settings.mobile-products-per-row,
+      products_per_page: section.settings.products-per-page,
+      pagination_options: section.settings.pagination_options
+    %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": {
+        "en": "Products per row",
+        "de": "Produkte pro Zeile",
+        "es": "Productos por fila",
+        "fr": "Produits par ligne",
+        "pt-PT": "Produtos por linha"
+      }
+    },
+    {
+      "type": "range",
+      "id": "desktop-products-per-row",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Desktop",
+        "de": "Desktop",
+        "es": "Escritorio",
+        "fr": "Ordinateur de bureau",
+        "pt-PT": "Ambiente de trabalho"
+      },
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "tablet-products-per-row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": {
+        "en": "Tablet",
+        "de": "Tablet",
+        "es": "Tablet",
+        "fr": "Tablette",
+        "pt-PT": "Tablet"
+      },
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "mobile-products-per-row",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": {
+        "en": "Mobile",
+        "de": "Mobil",
+        "es": "Móvil",
+        "fr": "Téléphone mobile",
+        "pt-PT": "Telemóvel"
+      },
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "products-per-page",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Number of rows per page",
+        "de": "Anzahl an Zeilen pro Seite",
+        "es": "Número de filas por página",
+        "fr": "Nombre de lignes par page",
+        "pt-PT": "Número de linhas por página"
+      },
+      "default": 4,
+      "info": {
+        "en": "Only applicable to desktop",
+        "de": "Gilt nur für den Desktop",
+        "es": "Solo aplicable a escritorio",
+        "fr": "Ne s'applique qu'aux ordinateurs de bureau",
+        "pt-PT": "Apenas aplicável no ambiente de trabalho"
+      }
+    },
+    {
+      "type": "select",
+      "id": "pagination_options",
+      "label": {
+        "en": "Pagination type",
+        "de": "Seitenzählungsart",
+        "es": "Tipo de paginación",
+        "fr": "Type de pagination",
+        "pt-PT": "Tipo de paginação"
+      },
+      "options": [
+        {
+          "value": "pagination_default",
+          "label": {
+            "en": "Paged navigation",
+            "de": "Seitennummerierte Navigation",
+            "es": "Navegación paginada",
+            "fr": "Navigation paginée",
+            "pt-PT": "Navegação por página"
+          }
+        },
+        {
+          "value": "pagination_infinite_scrolling",
+          "label": {
+            "en": "Infinite scrolling",
+            "de": "Unbegrenztes Scrolling",
+            "es": "Desplazamiento infinito",
+            "fr": "Défilement infini",
+            "pt-PT": "Scrolling infinito"
+          }
+        },
+        {
+          "value": "pagination_load_more",
+          "label": {
+            "en": "Load more button",
+            "de": "Schaltfläche \"Mehr anzeigen\"",
+            "es": "Cargar botón más",
+            "fr": "Charger plus de boutons",
+            "pt-PT": "Botão carregar mais"
+          }
+        }
+      ],
+      "default": "pagination_load_more"
+    },
+    {
+      "type": "header",
+      "content": "Header and filtering"
+    },
+    {
+      "type": "select",
+      "id": "desktop_position",
+      "options": [
+        {
+          "value": "topbar",
+          "label": "Top bar"
+        },
+        {
+          "value": "sidebar",
+          "label": "Sidebar"
+        }
+      ],
+      "default": "topbar",
+      "label": "Desktop position"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_collection_title",
+      "default": true,
+      "label": "Enable collection title"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_collection_description",
+      "default": true,
+      "label": "Enable collection description"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "Enable filtering",
+      "info": "[Customize filters](/admin/menus)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "Enable sorting"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card_image",
+      "name": "Product image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_badges",
+          "label": "Enable badges",
+          "default": true,
+          "info": "Sold out and Sale badges"
+        }
+      ]
+    },
+    {
+      "type": "product_card_title",
+      "name": "Product title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This is used to set the order and placement of the product title within the product cards in your collection product list."
+        }
+      ]
+    },
+    {
+      "type": "product_card_vendor",
+      "name": "Product vendor",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This is used to set the order and placement of the product vendor within the product cards in your collection product list."
+        }
+      ]
+    },
+    {
+      "type": "product_card_price",
+      "name": "Product price",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This is used to set the order and placement of the product price within the product cards in your collection product list."
+        }
+      ]
+    },
+    {
+      "type": "product_card_button",
+      "name": "Quick shop button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This is used to set the order and placement of the 'Add to cart' or 'View options' button within the product cards in your collection product list."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

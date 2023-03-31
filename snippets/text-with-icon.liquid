@@ -1,0 +1,17 @@
+<div class="text-with-icon{% if link %} is-link-wrapper{% endif %}{% if borders %} borders{% endif %}"{% if block_attributes %} {{ block_attributes }}{% endif %}>
+    <div class="text-with-icon--content{% if link %} is-link{% endif %}">
+
+    {% if link %}
+        <a href={{ link }} class="link">
+    {% endif %}
+
+    {% assign iconSize = settings.typography-body-font-size | remove: "px" | plus: 2 %}
+    <span class="text-with-icon--icon">{% render 'icons', icon: icon, iconSize: iconSize %}</span>
+    <span class="text-with-icon--text">{{ text }}</span>
+
+    {% if link %}
+        </a>
+    {% endif %}
+
+    </div>
+</div>

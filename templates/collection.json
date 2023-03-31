@@ -1,0 +1,75 @@
+{
+  "wrapper": "div.collection-wrapper.wrapper",
+  "sections": {
+    "collection-header": {
+      "type": "template--collection--header",
+      "blocks": {
+        "collection-image": {
+          "type": "collection_image",
+          "settings": {
+            "collection-image-size": "20vh"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "collection-image",
+        "title"
+      ],
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "template--collection",
+      "blocks": {
+        "product_card_image": {
+          "type": "product_card_image",
+          "settings": {
+            "enable_badges": true
+          }
+        },
+        "product_card_title": {
+          "type": "product_card_title",
+          "settings": {
+          }
+        },
+        "product_card_price": {
+          "type": "product_card_price",
+          "settings": {
+          }
+        },
+        "product_card_button": {
+          "type": "product_card_button",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "product_card_image",
+        "product_card_title",
+        "product_card_price",
+        "product_card_button"
+      ],
+      "settings": {
+        "desktop-products-per-row": 3,
+        "tablet-products-per-row": 2,
+        "mobile-products-per-row": 1,
+        "products-per-page": 4,
+        "pagination_options": "pagination_default",
+        "desktop_position": "sidebar",
+        "enable_collection_title": false,
+        "enable_collection_description": true,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "product-grid"
+  ]
+}

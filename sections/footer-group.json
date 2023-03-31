@@ -1,0 +1,60 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer-main": {
+      "type": "footer-main",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Quick links",
+            "footer_linklist": "footer"
+          }
+        },
+        "social": {
+          "type": "social",
+          "settings": {
+            "social_title": "Get connected"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "title": "Contact us"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_title": "",
+            "footer_newsletter_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu",
+        "social",
+        "text",
+        "newsletter"
+      ],
+      "settings": {
+        "alignment": "left"
+      }
+    },
+    "footer-bottom": {
+      "type": "footer-bottom",
+      "settings": {
+        "show_methods_of_payment": true,
+        "alignment": "left",
+        "footer_text": "",
+        "show_currency_selector": false,
+        "show_locale_selector": false
+      }
+    }
+  },
+  "order": [
+    "footer-main",
+    "footer-bottom"
+  ]
+}

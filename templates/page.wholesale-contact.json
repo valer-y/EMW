@@ -1,0 +1,328 @@
+{
+  "sections": {
+    "image-with-text-overlay": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image_height": "40vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": false,
+        "colors": "dark",
+        "textPosition": "left",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "",
+        "button_label": "",
+        "button-text": "#323232",
+        "button-background": "#000000",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#4e4e4e"
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "white",
+        "title": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "gallery": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "Heading",
+            "subheading": "Subheading",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "Heading",
+            "subheading": "Subheading",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "Heading",
+            "subheading": "Subheading",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-0",
+        "gallery-1",
+        "gallery-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "title": "Gallery",
+        "richtext": "<p>Inspire your customers<\/p>",
+        "remove-spacing": false,
+        "full-width": false,
+        "section-width": "content",
+        "content-position": "below-image"
+      }
+    },
+    "image-with-text-overlay-1": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image_height": "40vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": true,
+        "colors": "light",
+        "textPosition": "center",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 14,
+        "link": "shopify:\/\/collections",
+        "button_label": "Learn more",
+        "button-text": "#242424",
+        "button-background": "#ffffff",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#9f9f9f"
+      }
+    },
+    "contact-form": {
+      "type": "section--contact-form",
+      "blocks": {
+        "contact-form-0": {
+          "type": "name_input",
+          "settings": {
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-1": {
+          "type": "email_input",
+          "settings": {
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-2": {
+          "type": "tel_input",
+          "settings": {
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-3": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Company name",
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-4": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Company website",
+            "required": false,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-5": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "How did you hear about us?",
+            "required": false,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-6": {
+          "type": "message_input",
+          "settings": {
+            "required": true,
+            "input_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "contact-form-0",
+        "contact-form-1",
+        "contact-form-2",
+        "contact-form-3",
+        "contact-form-4",
+        "contact-form-5",
+        "contact-form-6"
+      ],
+      "settings": {
+        "section_color_scheme": "white",
+        "form_width": "full-width"
+      }
+    },
+    "logo-list": {
+      "type": "image--logo-list",
+      "blocks": {
+        "logo-list-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_5.png",
+            "link": ""
+          }
+        },
+        "logo-list-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_1.png",
+            "link": ""
+          }
+        },
+        "logo-list-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_4.png",
+            "link": ""
+          }
+        },
+        "logo-list-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_6.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo-list-2",
+        "logo-list-3",
+        "logo-list-0",
+        "logo-list-1"
+      ],
+      "settings": {
+        "colors": "accent",
+        "width": 100
+      }
+    },
+    "testimonials": {
+      "type": "text--testimonials",
+      "blocks": {
+        "testimonials-0": {
+          "type": "text",
+          "settings": {
+            "testimonial_text": "<p>\"Use this section to add reviews or testimonials from your store’s happy customers\"<\/p>",
+            "customer_name": "John Smith",
+            "link": "",
+            "stars": 0
+          }
+        },
+        "testimonials-1": {
+          "type": "text",
+          "settings": {
+            "testimonial_text": "<p>\"Use this section to add reviews or testimonials from your store’s happy customers\"<\/p>",
+            "customer_name": "John Smith",
+            "link": "",
+            "stars": 0
+          }
+        },
+        "testimonials-2": {
+          "type": "text",
+          "settings": {
+            "testimonial_text": "<p>\"Use this section to add reviews or testimonials from your store’s happy customers\"<\/p>",
+            "customer_name": "John Smith",
+            "link": "",
+            "stars": 0
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-0",
+        "testimonials-1",
+        "testimonials-2"
+      ],
+      "settings": {
+        "colors": "light",
+        "circle_images": true,
+        "title": ""
+      }
+    },
+    "events-calendar": {
+      "type": "events-calendar",
+      "blocks": {
+        "events-calendar-0": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "tbc": false,
+            "price": "",
+            "url": "",
+            "btn_text": "More info"
+          }
+        },
+        "events-calendar-1": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "tbc": false,
+            "price": "",
+            "url": "",
+            "btn_text": "More info"
+          }
+        },
+        "events-calendar-2": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "tbc": true,
+            "day_time": "",
+            "price": "",
+            "url": "",
+            "btn_text": "More info"
+          }
+        }
+      },
+      "block_order": [
+        "events-calendar-0",
+        "events-calendar-1",
+        "events-calendar-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "heading": "CALENDAR",
+        "description": "<p>View our upcoming events<\/p>",
+        "layout": "list",
+        "cards_per_row": 4,
+        "expand_card": false
+      }
+    },
+    "newsletter": {
+      "type": "newsletter--newsletter",
+      "settings": {
+        "colors": "accent",
+        "newsletter_description": ""
+      }
+    }
+  },
+  "order": [
+    "image-with-text-overlay",
+    "rich-text",
+    "gallery",
+    "image-with-text-overlay-1",
+    "contact-form",
+    "logo-list",
+    "testimonials",
+    "events-calendar",
+    "newsletter"
+  ]
+}

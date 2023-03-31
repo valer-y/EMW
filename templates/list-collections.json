@@ -1,0 +1,136 @@
+{
+  "sections": {
+    "countdown-timer": {
+      "type": "countdown-timer",
+      "blocks": {
+        "countdown-timer-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Countdown timer"
+          }
+        },
+        "countdown-timer-2": {
+          "type": "countdown_timer",
+          "settings": {
+            "end_date": "",
+            "end_time": "",
+            "hide_when_complete": false,
+            "time_labels": "show"
+          }
+        },
+        "countdown-timer-3": {
+          "type": "text",
+          "settings": {
+          }
+        },
+        "countdown-timer-4": {
+          "type": "button",
+          "settings": {
+            "label": "Shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "countdown-timer-1",
+        "countdown-timer-2",
+        "countdown-timer-3",
+        "countdown-timer-4"
+      ],
+      "settings": {
+        "color_scheme": "white",
+        "text_overlapping_image": true,
+        "section_width": "full",
+        "layout": "image_on_left",
+        "text_alignment": "center"
+      }
+    },
+    "main": {
+      "type": "template--collections-list",
+      "settings": {
+        "banner-image-size": "20vh",
+        "parallax": true,
+        "show_title": false,
+        "enable_badges": true,
+        "layout": "preview",
+        "items_per_row": 3,
+        "show_options": "all"
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "light",
+        "title": "",
+        "button_label": "Learn more",
+        "button_link": "shopify:\/\/collections"
+      }
+    },
+    "image-with-text-overlay": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image_height": "40vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": true,
+        "colors": "dark",
+        "textPosition": "left",
+        "textAlignment": "left",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "shopify:\/\/collections\/all",
+        "button_label": "Shop more",
+        "button-text": "#ffffff",
+        "button-background": "#000000",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#4e4e4e"
+      }
+    },
+    "logo-list": {
+      "type": "image--logo-list",
+      "blocks": {
+        "logo-list-0": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-list-1": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-list-2": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-list-3": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo-list-0",
+        "logo-list-1",
+        "logo-list-2",
+        "logo-list-3"
+      ],
+      "settings": {
+        "colors": "accent",
+        "width": 100,
+        "title": "As seen in"
+      }
+    }
+  },
+  "order": [
+    "countdown-timer",
+    "main",
+    "rich-text",
+    "image-with-text-overlay",
+    "logo-list"
+  ]
+}

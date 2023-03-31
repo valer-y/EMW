@@ -1,0 +1,127 @@
+{% comment %}
+  Renders a "complementary products" block that displays complementary products based on Shopify's Search & Discovery app.
+
+  Accepts:
+  - block_settings: {Object} eg. block.settings
+
+  Usage:
+    {% render 'complementary-products-block' with block_settings: block.settings %}
+{% endcomment %}
+
+{% liquid 
+  assign block_background = block_settings.complementary_block_bg | downcase
+  assign product_background = settings.color_body_bg_secondary | downcase
+%}
+
+<style>
+  {% if block_background != product_background %}
+    div[data-aid="complementary-products-block"].complementary-cross-sells-wrapper {
+      padding: 16px;
+    }
+
+    @media (max-width: 767px) {
+      div[data-aid="complementary-products-block"] .product-description-header {
+        margin-top: 0;
+      }
+    }
+  {% endif %}
+
+  div[data-aid="complementary-products-block"].complementary-cross-sells-wrapper {
+    padding-bottom: 16px;
+    margin-top: 15px;
+  }
+
+  div[data-aid="complementary-products-block"] .indiv-product-title-text {
+    padding-bottom: 8px;
+  }
+
+  .complementary-cross-sells-wrapper .product-description-header {
+    margin-bottom: 16px;
+  }
+
+  .swiper-controls {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .swiper-controls .swiper-pagination.swiper-pagination-fraction {
+    position: relative;
+    bottom: unset;
+  }
+
+  .comp_products_swiper .swiper-slide.swiper-slide-active {
+    padding: 0;
+  }
+
+  .comp_products_swiper .swiper-button-disabled {
+    background-color: transparent;
+  }
+
+  .comp_products_swiper .thumbs-direction-nav--next.swiper-button-disabled,
+  .comp_products_swiper .thumbs-direction-nav--prev.swiper-button-disabled {
+    opacity: 0.2;
+  }
+
+  .comp_products_swiper span.thumbs-direction-nav--next,
+  .comp_products_swiper span.thumbs-direction-nav--prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    cursor: pointer;
+  }
+</style>
+
+<div data-aid="complementary-products-block" class="hidden complementary-cross-sells-wrapper" style="background-color: {{ block_settings.complementary_block_bg }};" data-cart-action="{{ settings.cart-type }}">
+  {% if block_settings.title != blank %}
+    <h4 class="label custom-font product-description-header">
+      {{ block_settings.title }}
+    </h4>
+  {% endif %}
+
+  <complementary-products
+    data-aid="complementary-product-recommendations"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block_settings.products_to_show }}&intent=complementary"
+  >
+    {% if recommendations.performed and recommendations.products_count > 0 %}
+      {% assign number_of_slides = recommendations.products_count | plus: 0.0 | divided_by: block_settings.products_per_page | ceil %}
+        <div
+          class="comp_products_swiper swiper-container"
+        >
+            <div class="slides swiper-wrapper">
+              {% for i in (1..number_of_slides) %}
+              <div class="swiper-slide">
+                {% for recommendation in recommendations.products limit: block_settings.products_per_page offset: continue %}
+                  {% render 'complementary-product-card', comp_product: recommendation %}
+                {% endfor %}
+              </div>
+              {% endfor %}
+            </div>
+            {% if number_of_slides > 1 %}
+              <div class="swiper-controls">
+                <div class="thumbs-direction-nav">
+                  <span class="thumbs-direction-nav--prev" href="#">
+                    {% render 'theme-icon' with icon: 'chevron_left', widthUnset: true, iconClasses: 'chevron-left', iconAttributes: 'style="max-height:18px;"' %}
+                  </span>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="thumbs-direction-nav">
+                  <span class="thumbs-direction-nav--next" href="#">
+                    {% render 'theme-icon' with icon: 'chevron_right', widthUnset: true, iconClasses: 'chevron-right', iconAttributes: 'style="max-height:18px;"' %}
+                  </span>
+                </div>
+              </div>
+            {% endif %}
+        </div>
+    {% endif %}
+  </complementary-products>
+</div>
+
+<script src="{{ 'component-complementary-products.js' | asset_url }}" defer="defer" type="module" data-internal-script></script>

@@ -1,0 +1,174 @@
+{
+  "wrapper": "div.collection-wrapper.wrapper",
+  "sections": {
+    "image-with-text-overlay": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image": "{{ collection.image }}",
+        "image_height": "30vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": true,
+        "title": "{{ collection.title }}",
+        "text": "",
+        "colors": "light",
+        "textPosition": "center",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "",
+        "button_label": "",
+        "button-text": "#ffffff",
+        "button-background": "#000000",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#4e4e4e"
+      }
+    },
+    "collection-header": {
+      "type": "template--collection--header",
+      "disabled": true,
+      "blocks": {
+        "collection-image": {
+          "type": "collection_image",
+          "settings": {
+            "collection-image-size": "20vh"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "collection-image",
+        "title",
+        "description"
+      ],
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "template--collection",
+      "blocks": {
+        "product_card_image": {
+          "type": "product_card_image",
+          "settings": {
+            "enable_badges": true
+          }
+        },
+        "product_card_title": {
+          "type": "product_card_title",
+          "settings": {
+          }
+        },
+        "product_card_price": {
+          "type": "product_card_price",
+          "settings": {
+          }
+        },
+        "product_card_button": {
+          "type": "product_card_button",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "product_card_image",
+        "product_card_title",
+        "product_card_price",
+        "product_card_button"
+      ],
+      "settings": {
+        "desktop-products-per-row": 3,
+        "tablet-products-per-row": 2,
+        "mobile-products-per-row": 1,
+        "products-per-page": 4,
+        "pagination_options": "pagination_default",
+        "desktop_position": "sidebar",
+        "enable_collection_title": false,
+        "enable_collection_description": true,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    },
+    "gallery": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-0",
+        "gallery-2",
+        "gallery-1"
+      ],
+      "settings": {
+        "colors": "white",
+        "title": "{{ collection.title }}",
+        "richtext": "",
+        "remove-spacing": false,
+        "full-width": false,
+        "section-width": "full",
+        "content-position": "below-image"
+      }
+    },
+    "image-with-text": {
+      "type": "image--image-with-text",
+      "settings": {
+        "colors": "white",
+        "text_overlapping_image": true,
+        "section-width": "full",
+        "layout": "left",
+        "text_alignment": "left",
+        "button_label": "Shop now",
+        "button_link": "shopify:\/\/collections"
+      }
+    }
+  },
+  "order": [
+    "image-with-text-overlay",
+    "collection-header",
+    "product-grid",
+    "gallery",
+    "image-with-text"
+  ]
+}

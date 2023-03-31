@@ -1,0 +1,640 @@
+<link rel="preload" href="{{ 'section-events-calendar.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript>{{ 'section-events-calendar.min.css' | asset_url | stylesheet_tag }}</noscript>
+
+<section class="events-calendar" data-wetheme-section-type="events-calendar" data-wetheme-section-id="{{ section.id }}">
+  <div class="homepage-sections-wrapper homepage-sections-wrapper--{{ section.settings.colors }}">
+    <div class="events-calendar--inner wrapper-padded show-on-scroll">
+
+      {% if section.settings.heading != '' or section.settings.description != '' %}
+        <div class="events-calendar--header">
+          {% if section.settings.heading != '' %}
+            <h2>{{ section.settings.heading | escape }}</h2>
+          {% endif %}
+    
+          {% if section.settings.description != '' %}
+            <div class="rte">{{ section.settings.description }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if section.blocks.size > 0 %}
+        <ul class="events-layout--{{ section.settings.layout }}{% if section.settings.layout == 'grid' %} events-cols--{{ section.settings.cards_per_row }}{% if section.settings.expand_card %} event-card--expand{% endif %}{% endif %}">
+          {% for block in section.blocks %}
+            <li class="event" {{ block.shopify_attributes }}>
+              {% liquid
+
+                if section.settings.layout == 'grid'
+                  assign event_image = block.settings.grid_image
+                  if event_image.alt != blank
+                    assign event_image_alt = block.settings.grid_image.alt | escape
+                  else
+                    assign event_image_alt = block.settings.event_heading | escape
+                  endif
+                  assign event_image_aspect_ratio = block.settings.grid_image_size
+                  capture placeholder_number
+                    cycle 1, 2, 3, 4, 5, 6 
+                  endcapture
+                endif
+                assign day = block.settings.day
+                assign month = block.settings.month
+                assign tbc = block.settings.tbc
+                assign day_time = block.settings.day_time
+                assign price = ''
+                if block.settings.price != blank
+                  assign price = block.settings.price
+                endif
+                assign heading = block.settings.event_heading
+                assign event_location = block.settings.event_location
+                assign cta = false
+                if block.settings.url != blank and block.settings.btn_text != blank
+                  assign cta = true
+                endif
+                assign cta_link = block.settings.url
+                assign cta_text = block.settings.btn_text
+
+                if section.settings.layout == 'grid'
+                  render 'events-calendar--grid' with day: day, month: month, tbc: tbc, day_time: day_time, price: price, heading: heading, event_location: event_location, cta: cta, cta_link: cta_link, cta_text: cta_text, event_image: event_image, event_image_alt: event_image_alt, event_image_aspect_ratio: event_image_aspect_ratio, placeholder_number: placeholder_number
+                else
+                  render 'events-calendar--list' with day: day, month: month, tbc: tbc, day_time: day_time, price: price, heading: heading, event_location: event_location, cta: cta, cta_link: cta_link, cta_text: cta_text
+                endif
+              %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <div class="placeholder-noblocks">
+          {{ 'general.onboarding.no_content' | t }}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": {
+    "en": "Events calendar",
+    "de": "Veranstaltungskalender",
+    "es": "Calendario de eventos",
+    "fr": "Calendrier des événements",
+    "pt-PT": "Calendário de Eventos"
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "colors",
+      "label": {
+        "en": "Color scheme",
+        "de": "Farbschema",
+        "es": "Esquema de colores",
+        "fr": "Palette de couleurs",
+        "pt-PT": "Esquema de cores"
+      },
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": {
+            "en": "Minimal",
+            "fr": "Minimal",
+            "de": "Minimal",
+            "es": "Mínimo",
+            "pt-PT": "Mínimo"
+          }
+        },
+        {
+          "value": "light",
+          "label": {
+            "en": "Light",
+            "de": "Licht",
+            "es": "Luz",
+            "fr": "Clair",
+            "pt-PT": "Claro"
+          }
+        },
+        {
+          "value": "accent",
+          "label": {
+            "en": "Feature",
+            "de": "Eigenschaft",
+            "es": "Destacado",
+            "fr": "Caractéristique",
+            "pt-PT": "Funcionalidade"
+          }
+        },
+        {
+          "value": "dark",
+          "label": {
+            "en": "Dark",
+            "de": "Dunkel",
+            "es": "Oscuro",
+            "fr": "Foncé",
+            "pt-PT": "Escuro"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": {
+        "en": "Heading",
+        "de": "Überschrift",
+        "es": "Encabezado",
+        "fr": "Rubrique",
+        "pt-PT": "Título"
+      }
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": {
+        "en": "Description",
+        "de": "Beschreibung",
+        "es": "Descripción",
+        "fr": "Description",
+        "pt-PT": "Descrição"
+      }
+    },
+    {
+      "type": "radio",
+      "id": "layout",
+      "label": {
+          "en": "Layout",
+          "de": "Layout",
+          "es": "Diseño",
+          "fr": "Mise en page",
+          "pt-PT": "Apresentação"
+      },
+      "options": [
+        {
+          "value": "grid",
+          "label": {
+            "en": "Grid",
+            "de": "Netz",
+            "es": "Cuadrícula",
+            "fr": "Grille",
+            "pt-PT": "Grade"
+          }
+        },
+        {
+          "value": "list",
+          "label": {
+            "en": "List",
+            "de": "Aufführen",
+            "es": "Lista",
+            "fr": "Liste",
+            "pt-PT": "Lista"
+          }
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Events per row",
+        "de": "Ereignisse pro Zeile",
+        "es": "Eventos por fila",
+        "fr": "Événements par ligne",
+        "pt-PT": "Eventos por linha"
+      },
+      "info": {
+        "en": "This applies if section layout is set to 'Grid'.",
+        "de": "Dies gilt, wenn das Abschnittslayout auf 'Netz' eingestellt ist.",
+        "es": "Esto se aplica si el diseño de la sección se establece en 'Cuadrícula'.",
+        "fr": "Cela s'applique si la disposition de section est définie sur 'Grille'.",
+        "pt-PT": "Isso se aplica se o layout da seção estiver definido como 'Grade'."
+      },
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "expand_card",
+      "default": false,
+      "label": {
+         "en": "Expand event cards to fill last row",
+         "de": "Erweitern Sie Ereigniskarten, um die letzte Reihe zu füllen",
+         "es": "Expandir las tarjetas de eventos para llenar la última fila",
+         "fr": "Développez les cartes d'événement pour remplir la dernière ligne",
+         "pt-PT": "Expanda os cartões de evento para preencher a última linha"
+      },
+      "info": {
+        "en": "This applies if section layout is set to 'Grid'.",
+        "de": "Dies gilt, wenn das Abschnittslayout auf 'Netz' eingestellt ist.",
+        "es": "Esto se aplica si el diseño de la sección se establece en 'Cuadrícula'.",
+        "fr": "Cela s'applique si la disposition de section est définie sur 'Grille'.",
+        "pt-PT": "Isso se aplica se o layout da seção estiver definido como 'Grade'."
+      }
+    }
+  ],
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "event",
+      "name": {
+        "en": "Event",
+        "de": "Fall",
+        "es": "Evento",
+        "fr": "Événement",
+        "pt-PT": "Evento"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "grid_image",
+          "label": {
+            "en": "Image",
+            "de": "Bild",
+            "es": "Imagen",
+            "fr": "Image",
+            "pt-PT": "Imagem"
+          },
+          "info": {
+            "en": "This applies if section layout is set to 'Grid'.",
+            "de": "Dies gilt, wenn das Abschnittslayout auf 'Netz' eingestellt ist.",
+            "es": "Esto se aplica si el diseño de la sección se establece en 'Cuadrícula'.",
+            "fr": "Cela s'applique si la disposition de section est définie sur 'Grille'.",
+            "pt-PT": "Isso se aplica se o layout da seção estiver definido como 'Grade'."
+          }
+        },
+        {
+          "type": "select",
+          "id": "grid_image_size",
+          "label": {
+            "en": "Image size",
+            "fr": "Taille de l'image",
+            "de": "Bildgröße",
+            "es": "Tamaño de imagen",
+            "pt-PT": "Tamanho das imagens"
+          },
+          "default": "square",
+          "options": [
+            {
+              "value": "natural",
+              "label": {
+                "en": "Natural",
+                "fr": "Naturelle",
+                "de": "Natürlich",
+                "es": "Natural",
+                "pt-PT": "Natural"
+              }
+            },
+            {
+              "value": "square",
+              "label": {
+                "en": "Square (1:1)",
+                "fr": "Carré (1: 1)",
+                "de": "Quadrat (1:1)",
+                "es": "Cuadrado (1:1)",
+                "pt-PT": "Quadrado (1:1)"
+              }
+            },
+            {
+              "value": "tall",
+              "label": {
+                "en": "Tall (2:3)",
+                "fr": "Grand (2: 3)",
+                "de": "Groß (2:3)",
+                "es": "Vertical (2:3)",
+                "pt-PT": "Estreito (2:3)"
+              }
+            },
+            {
+              "value": "wide",
+              "label": {
+                "en": "Wide (4:3)",
+                "fr": "Large (4: 3)",
+                "de": "Weit (4:3)",
+                "es": "Ancho (4:3)",
+                "pt-PT": "Largo (4:3)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "day",
+          "label": {
+            "en": "Date",
+            "fr": "Date",
+            "de": "Datum",
+            "es": "Día",
+            "pt-PT": "Dia"
+          },
+          "min": 1,
+          "max": 31,
+          "default": 10
+        },
+        {
+          "type": "select",
+          "id": "month",
+          "label": {
+            "en": "Month",
+            "de": "Monat",
+            "es": "Mes",
+            "fr": "Mois",
+            "pt-PT": "Mês"
+          },
+          "default": "Jan",
+          "options": [
+            {
+              "value": "Jan",
+              "label": {
+                "en": "Jan",
+                "fr": "Jan",
+                "de": "Jan",
+                "es": "Ene",
+                "pt-PT": "Jan"
+              }
+            },
+            {
+              "value": "Feb",
+              "label": {
+                "en": "Feb",
+                "de": "Feb",
+                "es": "Feb",
+                "fr": "Fév",
+                "pt-PT": "Fev"
+              }
+            },
+            {
+              "value": "Mar",
+              "label": {
+                "en": "Mar",
+                "de": "Mar",
+                "es": "Mar",
+                "fr": "Mar",
+                "pt-PT": "Mar"
+              }
+            },
+            {
+              "value": "Apr",
+              "label": {
+                "en": "Apr",
+                "fr": "Avr",
+                "de": "Apr",
+                "es": "Abr",
+                "pt-PT": "Abr"
+              }
+            },
+            {
+              "value": "May",
+              "label": {
+                "en": "May",
+                "de": "Mai",
+                "es": "May",
+                "fr": "Mai",
+                "pt-PT": "Mai"
+              }
+            },
+            {
+              "value": "Jun",
+              "label": {
+                "en": "Jun",
+                "de": "Jun",
+                "es": "Jun",
+                "fr": "Jui",
+                "pt-PT": "Jun"
+              }
+            },
+            {
+              "value": "Jul",
+              "label": {
+                "en": "Jul",
+                "fr": "Jui",
+                "de": "Jul",
+                "es": "Jul",
+                "pt-PT": "Jul"
+              }
+            },
+            {
+              "value": "Aug",
+              "label": {
+                "en": "Aug",
+                "de": "Aug",
+                "es": "Ago",
+                "fr": "Août",
+                "pt-PT": "Ago"
+              }
+            },
+            {
+              "value": "Sep",
+              "label": {
+                "en": "Sep",
+                "de": "Sep",
+                "es": "Sep",
+                "fr": "Sep",
+                "pt-PT": "Set"
+              }
+            },
+            {
+              "value": "Oct",
+              "label": {
+                "en": "Oct",
+                "fr": "Oct",
+                "de": "Okt",
+                "es": "Oct",
+                "pt-PT": "Out"
+              }
+            },
+            {
+              "value": "Nov",
+              "label": {
+                "en": "Nov",
+                "de": "Nov",
+                "es": "Nov",
+                "fr": "Nov",
+                "pt-PT": "Nov"
+              }
+            },
+            {
+              "value": "Dec",
+              "label": {
+                "en": "Dec",
+                "de": "Dez",
+                "es": "Dic",
+                "fr": "Déc",
+                "pt-PT": "Dez"
+              }
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "tbc",
+          "label": {
+            "en": "Override date with 'TBC'",
+            "de": "Datum mit 'TBC' überschreiben",
+            "es": "Reemplazar fecha con 'TBC'",
+            "fr": "Remplacer la date par 'TBC'",
+            "pt-PT": "Substituir data com 'TBC'"
+          },
+          "info": {
+            "en": "Using this will hide any date and time settings and display a TBC message in its place.",
+            "de": "Wenn Sie dies verwenden, werden alle Datums- und Uhrzeiteinstellungen ausgeblendet und an ihrer Stelle eine TBC-Meldung angezeigt.",
+            "es": "Usar esto ocultará cualquier configuración de fecha y hora y mostrará un mensaje TBC en su lugar.",
+            "fr": "L'utilisation de cela masquera tous les paramètres de date et d'heure et affichera un message TBC à sa place.",
+            "pt-PT": "Usar isso ocultará todas as configurações de data e hora e exibirá uma mensagem TBC em seu lugar."
+          },
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "day_time",
+          "label": {
+            "en": "Day and time",
+            "de": "Tag und Uhrzeit",
+            "es": "Día y hora",
+            "fr": "Jour et heure",
+            "pt-PT": "Dia e hora"
+          },
+          "default": {
+            "en": "Saturday, 7:30pm",
+            "de": "Samstag, 7:30pm",
+            "es": "Sábado, 7:30pm",
+            "fr": "Samedi, 7:30pm",
+            "pt-PT": "Sábado, 7:30pm"
+          },
+          "info": {
+            "en": "E.g. Saturday, 7:30pm",
+            "de": "Z.B. Samstag, 7:30pm",
+            "es": "Ej. Sábado, 7:30pm",
+            "fr": "Ex. Samedi, 7:30pm",
+            "pt-PT": "Ex. Sábado, 7:30pm"
+          }
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": {
+            "en": "Price",
+            "de": "Preis",
+            "es": "Precio",
+            "fr": "Prix",
+            "pt-PT": "Preço"
+          },
+          "info": {
+            "en": "Use a numerical value to display price in your store currency (e.g. '10'). If using multiple currencies, use a comma separated list with currency codes (e.g. 'USD:10, EUR:9, GBP:8')",
+            "de": "Verwenden Sie einen numerischen Wert, um den Preis in Ihrer Geschäftswährung anzuzeigen (z.B. '10'). Wenn Sie mehrere Währungen verwenden, verwenden Sie eine durch Kommas getrennte Liste mit Währungscodes (z.B. 'USD:10, EUR:9, GBP:8')",
+            "es": "Use un valor numérico para mostrar el precio en la moneda de su tienda (ej. '10'). Si usa varias monedas, use una lista separada por comas con códigos de moneda (ej. USD: 10, EUR: 9, GBP: 8)",
+            "fr": "Utilisez une valeur numérique pour afficher le prix dans la devise de votre boutique (par exemple: '10'). Si vous utilisez plusieurs devises, utilisez une liste séparée par des virgules avec des codes de devise (par exemple: 'USD:10, EUR:9, GBP:8')",
+            "pt-PT": "Use um valor numérico para exibir o preço na moeda da sua loja (por exemplo: '10'). Se estiver usando várias moedas, use uma lista separada por vírgulas com códigos de moeda (por exemplo: 'USD:10, EUR:9, GBP:8')"
+          }
+        },
+        {
+          "type": "text",
+          "id": "event_heading",
+          "label": {
+            "en": "Event heading",
+            "de": "Ereignisüberschrift",
+            "es": "Título del evento",
+            "fr": "Titre de l'événement",
+            "pt-PT": "Título do evento"
+          },
+          "default": {
+            "en": "Event heading",
+            "de": "Ereignisüberschrift",
+            "es": "Título del evento",
+            "fr": "Titre de l'événement",
+            "pt-PT": "Título do evento"
+          }
+        },
+        {
+          "type": "text",
+          "id": "event_location",
+          "label": {
+            "en": "Location",
+            "de": "Standort",
+            "es": "Ubicación",
+            "fr": "Emplacement",
+            "pt-PT": "Localização"
+          },
+          "default": {
+            "en": "Location",
+            "de": "Standort",
+            "es": "Ubicación",
+            "fr": "Emplacement",
+            "pt-PT": "Localização"
+          }
+        },
+        {
+          "type": "header",
+          "content": {
+            "en": "Button",
+            "de": "Taste",
+            "es": "Botón",
+            "fr": "Bouton",
+            "pt-PT": "Botão"
+          }
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": {
+            "en": "Link",
+            "de": "Link",
+            "es": "Enlace",
+            "fr": "Lien",
+            "pt-PT": "Ligação"
+          }
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": {
+            "en": "Text",
+            "de": "Text",
+            "es": "Texto",
+            "fr": "Texte",
+            "pt-PT": "Texto"
+          },
+          "default": {
+            "en": "More info",
+            "de": "Mehr Infos",
+            "es": "Más info",
+            "fr": "Plus d'infos",
+            "pt-PT": "Mais info"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Events calendar",
+        "de": "Veranstaltungskalender",
+        "es": "Calendario de eventos",
+        "fr": "Calendrier des événements",
+        "pt-PT": "Calendário de Eventos"
+      },
+      "settings": {},
+      "blocks": [
+        {
+          "type": "event"
+        },
+        {
+          "type": "event"
+        },
+        {
+          "type": "event"
+        },
+        {
+          "type": "event"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": [
+      "header"
+    ]
+  }
+}
+{% endschema %}

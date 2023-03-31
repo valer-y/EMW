@@ -1,0 +1,175 @@
+<div
+  class="footer-bottom site-footer{% if template contains 'product' %}{% if settings.related_products_enable %}{% else %} product-sticker-stop{% endif %}{% endif %} footer-alignment--{{ section.settings.alignment }}"
+  data-wetheme-section-type="footer-bottom" data-wetheme-section-id="{{ section.id }}"
+>
+	<div class="wrapper-padded">
+        <div class="bottom--footer">
+
+        {% if section.settings.footer_text != blank %}
+            <div class="footer-description footer-description--{{ section.settings.alignment }}">
+            {{ section.settings.footer_text }}
+            </div>
+        {% endif %}
+
+        <div class="bottom--footer-row{% if section.settings.show_methods_of_payment %} bottom--footer--payment-methods{% endif %}">
+            {% if section.settings.show_locale_selector == true or section.settings.show_currency_selector == true %}
+                <div class="localization-form-wrapper">
+                    {% render 'localization-form', show_locale_selector: section.settings.show_locale_selector, show_currency_selector: section.settings.show_currency_selector %}
+                </div>
+            {% endif %}
+
+            {% if section.settings.show_methods_of_payment %}
+                {%- assign enabled_payment_types = shop.enabled_payment_types -%}
+                {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,stripe,visa' | split: ',' -%}
+
+                {% comment %}
+                Uncomment next line to show all icons
+                {%- assign enabled_payment_types = payment_icons_available -%}
+                {% endcomment %}
+
+                {% unless enabled_payment_types == empty %}
+                <ul class="inline-list payment-icons">
+                    {% for type in shop.enabled_payment_types %}
+                    {{ type | payment_type_svg_tag: class:'payment-icon' }}
+                    {% endfor %}
+                </ul>
+                {% endunless %}
+            {% endif %}
+
+            <ul class="bottom--footer---links">
+            <li><a href="{{ routes.root_url }}">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name }}</a></li>
+            <li>{{ powered_by_link }}</li>
+            </ul>
+
+        </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": {
+        "en": "Footer bottom",
+        "de": "Fußzeile",
+        "es": "Pie de página",
+        "fr": "Pied de page",
+        "pt-PT": "Rodapé"
+    },
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_methods_of_payment",
+            "label": {
+                "en": "Show payment icons",
+                "de": "Zahlungssymbole anzeigen",
+                "es": "Mostrar iconos de pago",
+                "fr": "Afficher les icônes de paiement",
+                "pt-PT": "Mostrar ícones de pagamento"
+            }
+        },
+        {
+            "type": "select",
+            "id": "alignment",
+            "label": {
+                "en": "Alignment",
+                "de": "Ausrichtung",
+                "es": "Alineación",
+                "fr": "Alignement",
+                "pt-PT": "Alinhamento"
+            },
+            "options": [
+                {
+                    "value": "left",
+                    "label": {
+                        "en": "Left",
+                        "de": "Links",
+                        "es": "Izquierda",
+                        "fr": "Gauche",
+                        "pt-PT": "Esquerda"
+                    }
+                },
+                {
+                    "value": "center",
+                    "label": {
+                        "en": "Center",
+                        "de": "Mitte",
+                        "es": "Centro",
+                        "fr": "Centre",
+                        "pt-PT": "Centro"
+                    }
+                }
+            ],
+            "default": "left"
+        },
+        {
+            "type": "richtext",
+            "id": "footer_text",
+            "label": {
+                "en": "Footer text",
+                "de": "Footer-Text",
+                "es": "Texto del pie de página",
+                "fr": "Texte de bas de page",
+                "pt-PT": "Texto de rodapé"
+            }
+        },
+        {
+            "type": "header",
+            "content": {
+              "en": "Country\/region selector",
+              "de": "Auswahl für Land\/Region",
+              "es": "Selector de país\/región",
+              "fr": "Sélecteur de pays\/région",
+              "pt-PT": "Seletor de país\/região"
+            },
+            "info": {
+                "en": "To add a country\/region, go to your [market settings.](\/admin\/settings\/markets)",
+                "de": "Gehe zu den [Markteinstellungen](\/admin\/settings\/markets), um ein Land \/ eine Region hinzuzufügen.",
+                "es": "Para agregar un país\/región, ve a tu [configuración de mercado.](\/admin\/settings\/markets)",
+                "fr": "Pour ajouter un pays\/une région, allez à vos [paramètres du marché.](\/admin\/settings\/markets)",
+                "pt-PT": "Para adicionar um país\/região, vá a [configurações de mercado.](\/admin\/settings\/markets)"
+            }
+        },
+        {
+            "type": "checkbox",
+            "id": "show_currency_selector",
+            "label": {
+              "en": "Enable country\/region selector",
+              "de": "Auswahl für Land\/Region aktivieren",
+              "es": "Activar selector de país\/región",
+              "fr": "Activer le sélecteur de pays\/région",
+              "pt-PT": "Ativar seletor de país\/região"
+            },
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": {
+              "en": "Language selector",
+              "de": "Sprachauswahl",
+              "es": "Selector de idioma",
+              "fr": "Sélecteur de langue",
+              "pt-PT": "Seletor de idioma"
+            },
+            "info": {
+              "en": "To add a language, go to your [language settings.](\/admin\/settings\/languages)",
+              "de": "Gehe zu den [Spracheinstellungen](\/admin\/settings\/languages), um eine Sprache hinzuzufügen.",
+              "es": "Para agregar un idioma, ve a tu [configuración de idiomas.](\/admin\/settings\/languages)",
+              "fr": "Pour ajouter une langue, allez à vos [paramètres de langue.](\/admin\/settings\/languages)",
+              "pt-PT": "Para adicionar um idioma, vá a [definições de idioma.](\/admin\/settings\/languages)"
+            }
+        },
+        {
+            "type": "checkbox",
+            "id": "show_locale_selector",
+            "label": {
+              "en": "Enable language selector",
+              "de": "Sprachauswahl aktivieren",
+              "es": "Activar selector de idioma",
+              "fr": "Activer le sélecteur de langue",
+              "pt-PT": "Ativar seletor de idioma"
+            },
+            "default": true
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,227 @@
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "media": {
+          "type": "media",
+          "settings": {
+            "image_size": "medium",
+            "image-display": "thumbnails",
+            "thumbnail_position": "below",
+            "enable_image_zoom": true,
+            "enable_video_loop": false
+          }
+        },
+        "sale_badge": {
+          "type": "sale_badge",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "shipping_policy": true,
+            "tax_included": false
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "product_variant_style": "swatches",
+            "thumbnail_changes_variant": false,
+            "hide_soldout_variants": false
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_smart_checkout": true
+          }
+        },
+        "local_pickup": {
+          "type": "local_pickup",
+          "settings": {
+          }
+        },
+        "trust_badges": {
+          "type": "trust_badges",
+          "settings": {
+            "trust-badge_max_width": 220
+          }
+        }
+      },
+      "block_order": [
+        "media",
+        "sale_badge",
+        "title",
+        "price",
+        "options",
+        "quantity",
+        "buy_buttons",
+        "local_pickup",
+        "trust_badges"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "show_out_of_stock_email": true
+      }
+    },
+    "product-description": {
+      "type": "template--product--description",
+      "settings": {
+        "enable_readmore": false
+      }
+    },
+    "image-with-text": {
+      "type": "image--image-with-text",
+      "settings": {
+        "colors": "light",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "layout": "left",
+        "text_alignment": "center",
+        "title": "GIVE THE GIFT OF HEALTH",
+        "text": "<p>Let the recipient choose their own products with our gift card, delivered straight to their door.<\/p>",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "info-columns": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "info-columns-0": {
+          "type": "image_and_text",
+          "settings": {
+            "heading": "HEADING",
+            "button_text": "Learn more",
+            "button_link": ""
+          }
+        },
+        "info-columns-1": {
+          "type": "image_and_text",
+          "settings": {
+            "heading": "HEADING",
+            "button_text": "Learn more",
+            "button_link": ""
+          }
+        },
+        "info-columns-2": {
+          "type": "image_and_text",
+          "settings": {
+            "heading": "HEADING",
+            "button_text": "Learn more",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "info-columns-0",
+        "info-columns-1",
+        "info-columns-2"
+      ],
+      "settings": {
+        "colors": "white",
+        "heading": "",
+        "description": "",
+        "columns_per_row": 3,
+        "text_alignment": "left",
+        "vertical_alignment": "top"
+      }
+    },
+    "product-recommendations": {
+      "type": "template--product--recommendations",
+      "blocks": {
+        "product_card_image": {
+          "type": "product_card_image",
+          "settings": {
+            "enable_badges": true
+          }
+        },
+        "product_card_title": {
+          "type": "product_card_title",
+          "settings": {
+          }
+        },
+        "product_card_vendor": {
+          "type": "product_card_vendor",
+          "settings": {
+          }
+        },
+        "product_card_price": {
+          "type": "product_card_price",
+          "settings": {
+          }
+        },
+        "product_card_button": {
+          "type": "product_card_button",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "product_card_image",
+        "product_card_title",
+        "product_card_vendor",
+        "product_card_price",
+        "product_card_button"
+      ],
+      "settings": {
+        "product_recommendations_heading": "You may also like"
+      }
+    },
+    "recently-viewed": {
+      "type": "template--product--recently-viewed",
+      "blocks": {
+        "product_card_image": {
+          "type": "product_card_image",
+          "settings": {
+            "enable_badges": true
+          }
+        },
+        "product_card_title": {
+          "type": "product_card_title",
+          "settings": {
+          }
+        },
+        "product_card_price": {
+          "type": "product_card_price",
+          "settings": {
+          }
+        },
+        "product_card_button": {
+          "type": "product_card_button",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "product_card_image",
+        "product_card_title",
+        "product_card_price",
+        "product_card_button"
+      ],
+      "settings": {
+        "recently_viewed_title": "Recently viewed products"
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "product-description",
+    "image-with-text",
+    "info-columns",
+    "product-recommendations",
+    "recently-viewed"
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "sections": {
+    "main": {
+      "type": "template--article",
+      "settings": {
+        "article-sidebar-description": "",
+        "blog-sidebar-link": "",
+        "show_blog_tags": false,
+        "show_recent_posts": true,
+        "blog_show_date": true
+      }
+    },
+    "gallery": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-0",
+        "gallery-1",
+        "gallery-2"
+      ],
+      "settings": {
+        "colors": "accent",
+        "title": "Gallery",
+        "richtext": "<p>Inspire your customers<\/p>",
+        "remove-spacing": false,
+        "full-width": false,
+        "section-width": "content",
+        "content-position": "below-image"
+      }
+    },
+    "featured-product": {
+      "type": "products--featured-product",
+      "settings": {
+        "title": "",
+        "richtext": "",
+        "product_variant_style": "swatches",
+        "hide_soldout_variants": false,
+        "show-giftwrap": false,
+        "show-vendor": false,
+        "show_product_description": false,
+        "show_quantity_selector": false,
+        "show_add_to_cart": true,
+        "show_smart_checkout": false,
+        "image-placement": "left",
+        "enable_video_loop": false
+      }
+    },
+    "collage-builder": {
+      "type": "collage-builder",
+      "blocks": {
+        "collage-builder-0": {
+          "type": "image",
+          "settings": {
+            "heading_size": 30,
+            "button_label": "Shop now",
+            "url": "",
+            "desktop_position": "md-min-align-bottom md-min-justify-right",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "text_color": "#FFFFFF",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "collage-builder-1": {
+          "type": "text",
+          "settings": {
+            "heading": "INCLUDE TEXT DETAILS",
+            "heading_size": 30,
+            "text_alignment": "left",
+            "button_label": "Shop now",
+            "url": "",
+            "desktop_position": "md-min-align-bottom md-min-justify-left",
+            "text_color": "#333",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E"
+          }
+        },
+        "collage-builder-2": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_size": 30,
+            "button_label": "Shop now",
+            "url": "",
+            "desktop_position": "md-min-align-top md-min-justify-left",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "text_color": "#FFFFFF",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "collage-builder-3": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_size": 30,
+            "button_label": "Shop now",
+            "url": "",
+            "desktop_position": "md-min-align-bottom md-min-justify-left",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "text_color": "#FFFFFF",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "collage-builder-4": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_size": 30,
+            "button_label": "Shop now",
+            "url": "",
+            "desktop_position": "md-min-align-bottom md-min-justify-right",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "text_color": "#FFFFFF",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "collage-builder-0",
+        "collage-builder-1",
+        "collage-builder-2",
+        "collage-builder-3",
+        "collage-builder-4"
+      ],
+      "settings": {
+        "color_scheme": "white",
+        "title": "",
+        "description": "",
+        "remove_spacing": true,
+        "section_width": "full",
+        "width_1": "3",
+        "height_1": "3",
+        "width_2": "3",
+        "height_2": "3",
+        "width_3": "3",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "6",
+        "block_alignment": "center"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter--newsletter",
+      "settings": {
+        "colors": "accent",
+        "newsletter_description": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "gallery",
+    "featured-product",
+    "collage-builder",
+    "newsletter"
+  ]
+}

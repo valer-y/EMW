@@ -1,0 +1,171 @@
+{
+  "wrapper": "div.collection-wrapper.wrapper",
+  "sections": {
+    "image-with-text-overlay": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image": "{{ collection.image }}",
+        "image_height": "30vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": true,
+        "title": "{{ collection.title }}",
+        "text": "",
+        "colors": "light",
+        "textPosition": "center",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "",
+        "button_label": "",
+        "button-text": "#ffffff",
+        "button-background": "#000000",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#4e4e4e"
+      }
+    },
+    "collection-header": {
+      "type": "template--collection--header",
+      "disabled": true,
+      "blocks": {
+        "collection-image": {
+          "type": "collection_image",
+          "settings": {
+            "collection-image-size": "20vh"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "collection-image",
+        "title",
+        "description"
+      ],
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "template--collection",
+      "blocks": {
+        "product_card_image": {
+          "type": "product_card_image",
+          "settings": {
+            "enable_badges": true
+          }
+        },
+        "product_card_title": {
+          "type": "product_card_title",
+          "settings": {
+          }
+        },
+        "product_card_price": {
+          "type": "product_card_price",
+          "settings": {
+          }
+        },
+        "product_card_button": {
+          "type": "product_card_button",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "product_card_image",
+        "product_card_title",
+        "product_card_price",
+        "product_card_button"
+      ],
+      "settings": {
+        "desktop-products-per-row": 3,
+        "tablet-products-per-row": 2,
+        "mobile-products-per-row": 1,
+        "products-per-page": 4,
+        "pagination_options": "pagination_default",
+        "desktop_position": "sidebar",
+        "enable_collection_title": false,
+        "enable_collection_description": true,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    },
+    "countdown-timer": {
+      "type": "countdown-timer",
+      "blocks": {
+        "countdown-timer-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Countdown timer"
+          }
+        },
+        "countdown-timer-2": {
+          "type": "countdown_timer",
+          "settings": {
+            "end_date": "",
+            "end_time": "",
+            "hide_when_complete": false,
+            "time_labels": "show"
+          }
+        },
+        "countdown-timer-3": {
+          "type": "text",
+          "settings": {
+          }
+        },
+        "countdown-timer-4": {
+          "type": "button",
+          "settings": {
+            "label": "Shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "countdown-timer-1",
+        "countdown-timer-2",
+        "countdown-timer-3",
+        "countdown-timer-4"
+      ],
+      "settings": {
+        "color_scheme": "light",
+        "text_overlapping_image": false,
+        "section_width": "full",
+        "layout": "image_on_right",
+        "text_alignment": "center"
+      }
+    },
+    "blog-posts": {
+      "type": "blog--blog-posts",
+      "blocks": {
+        "blog-posts-0": {
+          "type": "blog",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "blog-posts-0"
+      ],
+      "settings": {
+        "colors": "white",
+        "richtext": "",
+        "blog_show_date": false,
+        "post_limit": 3
+      }
+    }
+  },
+  "order": [
+    "image-with-text-overlay",
+    "collection-header",
+    "product-grid",
+    "countdown-timer",
+    "blog-posts"
+  ]
+}

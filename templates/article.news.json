@@ -1,0 +1,146 @@
+{
+  "sections": {
+    "main": {
+      "type": "template--article",
+      "settings": {
+        "article-sidebar-description": "",
+        "blog-sidebar-link": "",
+        "show_blog_tags": false,
+        "show_recent_posts": true,
+        "blog_show_date": true
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "light",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "gallery": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "title": "",
+            "subheading": "SUBHEADING",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-0",
+        "gallery-1",
+        "gallery-2"
+      ],
+      "settings": {
+        "colors": "accent",
+        "title": "Gallery",
+        "richtext": "",
+        "remove-spacing": false,
+        "full-width": false,
+        "section-width": "content",
+        "content-position": "below-image"
+      }
+    },
+    "collage-builder": {
+      "type": "collage-builder",
+      "blocks": {
+        "collage-builder-0": {
+          "type": "text",
+          "settings": {
+            "heading": "INCLUDE TEXT DETAILS",
+            "heading_size": 29,
+            "text_alignment": "left",
+            "button_label": "Shop now",
+            "url": "shopify:\/\/collections",
+            "desktop_position": "md-min-align-center md-min-justify-left",
+            "background_color": "#ffffff",
+            "text_color": "#333",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E"
+          }
+        },
+        "collage-builder-1": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_size": 30,
+            "button_label": "Shop now",
+            "url": "",
+            "desktop_position": "md-min-align-top md-min-justify-left",
+            "mobile_position": "md-max-align-top md-max-justify-left",
+            "text_color": "#FFFFFF",
+            "button_color": "#FFFFFF",
+            "button_background_color": "#333",
+            "button_hover_color": "#FFFFFF",
+            "button_hover_background_color": "#4E4E4E",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "collage-builder-0",
+        "collage-builder-1"
+      ],
+      "settings": {
+        "color_scheme": "white",
+        "title": "",
+        "description": "",
+        "remove_spacing": true,
+        "section_width": "full",
+        "width_1": "3",
+        "height_1": "3",
+        "width_2": "1.5",
+        "height_2": "3",
+        "width_3": "3",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "6",
+        "block_alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "gallery",
+    "collage-builder"
+  ]
+}

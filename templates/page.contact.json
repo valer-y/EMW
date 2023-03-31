@@ -1,0 +1,196 @@
+{
+  "sections": {
+    "image-with-text-overlay": {
+      "type": "image--image-with-text-overlay",
+      "settings": {
+        "image_height": "30vw",
+        "bg_image_overlay_opacity": 20,
+        "parallax": true,
+        "text": "",
+        "colors": "light",
+        "textPosition": "center",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "",
+        "button_label": "",
+        "button-text": "#ffffff",
+        "button-background": "#000000",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#4e4e4e"
+      }
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "accordion-0": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-1": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-2": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-3": {
+          "type": "tab_content",
+          "settings": {
+          }
+        },
+        "accordion-4": {
+          "type": "tab_content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "accordion-0",
+        "accordion-1",
+        "accordion-2",
+        "accordion-3",
+        "accordion-4"
+      ],
+      "settings": {
+        "colors": "white",
+        "faq_icon": "plus_minus"
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "accent",
+        "button_label": "Learn more",
+        "button_link": "shopify:\/\/collections"
+      }
+    },
+    "contact-form": {
+      "type": "section--contact-form",
+      "blocks": {
+        "contact-form-0": {
+          "type": "name_input",
+          "settings": {
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-1": {
+          "type": "email_input",
+          "settings": {
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "contact-form-3": {
+          "type": "message_input",
+          "settings": {
+            "required": true,
+            "input_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "contact-form-0",
+        "contact-form-1",
+        "contact-form-3"
+      ],
+      "settings": {
+        "section_color_scheme": "white",
+        "form_width": "full-width"
+      }
+    },
+    "image-with-text": {
+      "type": "image--image-with-text",
+      "settings": {
+        "colors": "light",
+        "text_overlapping_image": false,
+        "section-width": "content",
+        "layout": "left",
+        "text_alignment": "center",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "gallery": {
+      "type": "image--gallery",
+      "blocks": {
+        "gallery-2": {
+          "type": "image",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-1": {
+          "type": "image",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-0": {
+          "type": "image",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        },
+        "gallery-3": {
+          "type": "image",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
+          }
+        }
+      },
+      "block_order": [
+        "gallery-2",
+        "gallery-1",
+        "gallery-0",
+        "gallery-3"
+      ],
+      "settings": {
+        "colors": "accent",
+        "title": "Gallery",
+        "richtext": "",
+        "remove-spacing": true,
+        "full-width": false,
+        "section-width": "full",
+        "content-position": "hover"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter--newsletter",
+      "settings": {
+        "colors": "accent",
+        "newsletter_description": ""
+      }
+    }
+  },
+  "order": [
+    "image-with-text-overlay",
+    "accordion",
+    "rich-text",
+    "contact-form",
+    "image-with-text",
+    "gallery",
+    "newsletter"
+  ]
+}

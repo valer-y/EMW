@@ -1,0 +1,37 @@
+<div data-value="{{ value }}" class="swatch-element image-swatch swatch-element-{{ size }} {{ aspect_ratio }} {{ value | handle }} {% if available %}available{% else %}soldout{% endif %}">
+  {% if image_url != blank %}
+    <div class="tooltip">{{ value }}</div>
+  {% endif %}
+
+  <input
+    id="{{ section.id }}-swatch-{{ option_index }}-{{ value }}"
+    class="visually-hidden"
+    type="radio"
+    value="{{ value }}"
+    {% if checked == true %}
+      checked
+    {% endif %}
+    {% if product_swatch %}
+      name="option-{{ option_index | plus: 1 }}"
+      v-model="option{{ option_index | plus: 1 }}"
+    {% endif %}
+    {% if variation_redirect != blank %}
+      onclick="window.location='{{ variation_redirect }}'; return false;"
+    {% endif %}
+  />
+  {% if image_url != blank %}
+    <label
+      class="image-swatch-{{ size }} aspect-ratio--{{ aspect_ratio }}"
+      for="{{ section.id }}-swatch-{{ option_index }}-{{ value }}"
+      style="background-position: center; background-image: url({{ image_url }});"
+    >
+    </label>
+  {% else %}
+    <label
+      class="image-swatch-{{ size }} aspect-ratio--{{ aspect_ratio }}"
+      for="{{ section.id }}-swatch-{{ option_index }}-{{ value }}"
+    >
+      {{ value }}
+    </label>
+  {% endif %}
+</div>
