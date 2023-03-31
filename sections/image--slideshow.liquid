@@ -128,7 +128,9 @@
                                             {% endif %}
 
                                                 <div class="homepage-featured-content-box{% if overlay_text %} slideshow-mobile-overlay-text{% endif %}">
+                                                    <div class="featured-content-box--border"></div>
                                                     <div class="homepage-featured-content-box-inner wow fadeInUp {% if block.settings.mobile_image == blank and section.settings.show-slide-dots %} mobile-dot-nav-spacing{% endif %}">
+                                                        <div class="feature-content-box--border">
                                                         {% if block.settings.title != blank %}
                                                             <div class="sitewide--title-wrapper slideshow-title">
                                                                 <h2 class="homepage-sections--title homepage-section-title" id="{{ section.id }}_{{ block.id }}_title">
@@ -144,6 +146,29 @@
                                                         {% render 'home-section-button', link: block.settings.button_link, label: block.settings.button_label %}
                                                     </div>
                                                 </div>
+
+                                                <style>
+                                                    .featured-content-box--border {
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        position: absolute;
+                                                        outline: 2px solid white;
+                                                        outline-offset: -20px;
+                                                        opacity: 0.3;
+                                                    }
+
+                                                    .homepage-slider-container .homepage-featured-content-box {
+                                                        width: auto;
+                                                        right: 10vw;
+                                                        max-width: 390px;
+                                                    }
+
+                                                    .homepage-featured-content-box-inner {
+                                                        background-color: #1d1d1d;
+                                                        height: 60vh;
+                                                    }
+
+                                                </style>
 
                                         {% if slide_is_link %}
                                             </a>
@@ -186,7 +211,31 @@
 	</div>
 </div>
 
+<div class="spacer--block">
+    <div class="header--gradient-line"></div>
+            <h2>TEMPLATE ELEMENT</h2>
+    <div class="header--gradient-line"></div>
+</div>
+
 <style>
+    .spacer--block {
+        height: 160px;
+        padding: 6px 0;
+        width: 100%;
+        background-color: #1d1d1d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .spacer--block h2 {
+        font-size: 29px;
+        margin: 0 auto;
+        color: #aaaaaa;
+    }
+
+
+
 	@media screen and (min-width: 768px) {
 	  .slider-section--{{ section.id }} h2.homepage-sections--title{
 	    font-size: {{ section.settings.caption-heading-size }}px;

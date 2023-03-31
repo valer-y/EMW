@@ -6,6 +6,9 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Chrysler_Building_Midtown_Manhattan_New_York_City_1932-2.jpg",
+            "title": "Share your story",
+            "text": "Here's your chance to make a great first impression",
             "button_label": "Shop now",
             "button_link": "shopify:\/\/collections",
             "caption-background": "rgba(0,0,0,0)",
@@ -42,6 +45,8 @@
         "collection-0": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
+            "subheading": "Subheading",
             "overlay-btn-text": "Shop now",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -51,6 +56,8 @@
         "collection-1": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
+            "subheading": "Subheading",
             "overlay-btn-text": "Shop now",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -79,6 +86,7 @@
         "colors": "white",
         "title": "",
         "richtext": "",
+        "collection": "",
         "grid-desktop": 4,
         "grid-tablet": 3,
         "grid-mobile": 2,
@@ -90,8 +98,11 @@
     "video-video-hero": {
       "type": "video--video-hero",
       "settings": {
+        "url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1f45a4a46f0440d7be33dcc38d00a101.mp4",
         "desktopHeight": "550",
         "mobileHeight": "350",
+        "title": "Share your story",
+        "subheading": "Here's your chance to make a great first impression",
         "textAlignment": "center-left",
         "textColor": "#ffffff",
         "textShadow": false,
@@ -111,6 +122,7 @@
         "colors": "white",
         "title": "",
         "richtext": "",
+        "collection": "",
         "grid-desktop": 4,
         "grid-tablet": 3,
         "grid-mobile": 2,
@@ -125,6 +137,8 @@
         "image_height": "40vw",
         "bg_image_overlay_opacity": 0,
         "parallax": true,
+        "title": "Share your story",
+        "text": "Add a large image with text overlay to give focus to your chosen product, collection, or blog post",
         "colors": "dark",
         "textPosition": "left",
         "textAlignment": "right",
@@ -174,7 +188,8 @@
       ],
       "settings": {
         "colors": "accent",
-        "width": 100
+        "width": 100,
+        "title": "As seen in"
       }
     },
     "countdown-timer": {
@@ -198,6 +213,7 @@
         "countdown-timer-3": {
           "type": "text",
           "settings": {
+            "text": "Grab the offer before it's gone"
           }
         },
         "countdown-timer-4": {
@@ -272,6 +288,8 @@
         "section-width": "full",
         "layout": "left",
         "text_alignment": "left",
+        "title": "Share brand or product details",
+        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
         "button_label": "Learn more",
         "button_link": "shopify:\/\/collections"
       }
@@ -281,6 +299,7 @@
       "settings": {
         "title": "",
         "richtext": "",
+        "featured_product": "",
         "product_variant_style": "swatches",
         "hide_soldout_variants": false,
         "show-giftwrap": false,
@@ -300,8 +319,13 @@
           "type": "event",
           "settings": {
             "grid_image_size": "square",
+            "day": 10,
+            "month": "Jan",
             "tbc": false,
+            "day_time": "Saturday, 7:30pm",
             "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
             "url": "",
             "btn_text": "More info"
           }
@@ -310,8 +334,13 @@
           "type": "event",
           "settings": {
             "grid_image_size": "square",
+            "day": 10,
+            "month": "Jan",
             "tbc": false,
+            "day_time": "Saturday, 7:30pm",
             "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
             "url": "",
             "btn_text": "More info"
           }
@@ -320,9 +349,13 @@
           "type": "event",
           "settings": {
             "grid_image_size": "square",
+            "day": 10,
+            "month": "Jan",
             "tbc": true,
             "day_time": "",
             "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
             "url": "",
             "btn_text": "More info"
           }
@@ -349,33 +382,44 @@
           "type": "image",
           "settings": {
             "link": "shopify:\/\/collections",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
-            "overlay_font_color": "#ffffff"
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
           }
         },
         "gallery-1": {
           "type": "image",
           "settings": {
             "link": "shopify:\/\/collections",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
-            "overlay_font_color": "#ffffff"
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
           }
         },
         "gallery-2": {
           "type": "image",
           "settings": {
             "link": "shopify:\/\/collections",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
-            "overlay_font_color": "#ffffff"
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
           }
         },
         "gallery-3": {
           "type": "image",
           "settings": {
             "link": "shopify:\/\/collections",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -405,6 +449,7 @@
         "blog": {
           "type": "blog",
           "settings": {
+            "blog": ""
           }
         }
       },
@@ -413,6 +458,7 @@
       ],
       "settings": {
         "colors": "white",
+        "title": "From the blog",
         "richtext": "",
         "blog_show_date": false,
         "post_limit": 3
@@ -424,12 +470,16 @@
         "advert-0": {
           "type": "text",
           "settings": {
+            "heading": "What makes you different",
+            "subheading": "Shout about your unique selling points",
             "link": "shopify:\/\/collections"
           }
         },
         "advert-1": {
           "type": "text",
           "settings": {
+            "heading": "What makes you different",
+            "subheading": "Shout about your unique selling points",
             "link": "shopify:\/\/collections"
           }
         }
