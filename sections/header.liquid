@@ -401,7 +401,35 @@ Testing Cypress integration
         {{ site_nav }}
       </div>
     {% endif %}
+    <div class="header--gradient-line"></div>
   </header>
+
+  <style>
+    header {
+      padding-bottom: 6px;
+    }
+    .site-header {
+      border-bottom: unset;
+    }
+    .top-links a, .top-links a:visited, .top-links .top-links--icon-links a, .top-links--icon-links select, .site-header localization-form button {
+      padding-bottom: 0;
+      margin-top: 10px;
+    }
+    .site-header localization-form button {
+      margin-top: 15px;
+    }
+    .header--gradient-line {
+      height: 6px;
+      background: linear-gradient(to right, rgba(50,50,50,1) 0%, rgba(120,120,120,1) 50%, rgba(50,50,50,1) 100%);
+    }
+    .site-header .site-header__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+  </style>
 
   <nav class="nav-bar mobile-nav-bar-wrapper large--hide medium-down--show{% if collection-overlay or homepage-overlay or list-collection-overlay or contact-overlay %} overlay-header{% endif %}">
     <div class="wrapper-padded">
