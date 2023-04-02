@@ -130,7 +130,7 @@
                                                 <div class="homepage-featured-content-box{% if overlay_text %} slideshow-mobile-overlay-text{% endif %}">
                                                     <div class="featured-content-box--border"></div>
                                                     <div class="homepage-featured-content-box-inner wow fadeInUp {% if block.settings.mobile_image == blank and section.settings.show-slide-dots %} mobile-dot-nav-spacing{% endif %}">
-                                                        <div class="feature-content-box--border">
+                                                        <div class="feature-content-box--border feature--inner-content">
                                                         {% if block.settings.title != blank %}
                                                             <div class="sitewide--title-wrapper slideshow-title">
                                                                 <h2 class="homepage-sections--title homepage-section-title" id="{{ section.id }}_{{ block.id }}_title">
@@ -148,11 +148,12 @@
                                                 </div>
 
                                                 <style>
+
                                                     .featured-content-box--border {
                                                         height: 100%;
                                                         width: 100%;
                                                         position: absolute;
-                                                        outline: 2px solid white;
+                                                        outline: 5px solid white;
                                                         outline-offset: -20px;
                                                         opacity: 0.3;
                                                     }
@@ -164,10 +165,21 @@
                                                     }
 
                                                     .homepage-featured-content-box-inner {
-                                                        background-color: #1d1d1d;
+                                                        background-color: rgba(0, 0, 0, 0.7);
                                                         height: 60vh;
                                                     }
 
+                                                    .homepage-featured-content-box-inner {
+                                                        padding: 40px 40px;
+                                                    }
+                                                    
+                                                    .feature--inner-content {
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: space-evenly;
+                                                    }
                                                 </style>
 
                                         {% if slide_is_link %}
@@ -213,7 +225,7 @@
 
 <div class="spacer--block">
     <div class="header--gradient-line"></div>
-            <h2>TEMPLATE ELEMENT</h2>
+            <h2>“Can’t repeat the past?…Why of course you can!”</h2>
     <div class="header--gradient-line"></div>
 </div>
 
