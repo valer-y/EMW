@@ -1,0 +1,22 @@
+{% comment %}
+    ## Changes
+{% endcomment %}
+<div class="spacer--block">
+    <div class="header--gradient-line"></div>
+            <h2>{{ section.settings.main_text }}</h2>
+    <div class="header--gradient-line"></div>
+</div>
+
+{% schema %}
+    {
+        "name": "Quatation-promo block",
+        "settings": [
+            {
+                "type": "text",
+                "id": "main_text",
+                "default": "The gratest gin I've ever seen",
+                "label": "Main text"
+            }
+        ]
+    }
+{% endschema %}

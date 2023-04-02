@@ -6,7 +6,7 @@
         "countdown-timer-1": {
           "type": "heading",
           "settings": {
-            "heading": "Countdown timer"
+            "heading": "Don't loose your chance"
           }
         },
         "countdown-timer-2": {
@@ -21,6 +21,7 @@
         "countdown-timer-3": {
           "type": "text",
           "settings": {
+            "text": "Grab the offer before it's gone"
           }
         },
         "countdown-timer-4": {
@@ -39,6 +40,7 @@
       ],
       "settings": {
         "color_scheme": "white",
+        "image": "shopify:\/\/shop_images\/113.jpg",
         "text_overlapping_image": true,
         "section_width": "full",
         "layout": "image_on_left",
@@ -47,6 +49,9 @@
     },
     "main": {
       "type": "template--collections-list",
+      "custom_css": [
+        ".collection-main-body-inner {display: flex; justify-content: center;}"
+      ],
       "settings": {
         "banner-image-size": "20vh",
         "parallax": true,
@@ -62,16 +67,20 @@
       "settings": {
         "colors": "light",
         "title": "",
+        "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.<\/p>",
         "button_label": "Learn more",
         "button_link": "shopify:\/\/collections"
       }
     },
     "image-with-text-overlay": {
       "type": "image--image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image_height": "40vw",
         "bg_image_overlay_opacity": 0,
         "parallax": true,
+        "title": "Share your story",
+        "text": "Add a large image with text overlay to give focus to your chosen product, collection, or blog post",
         "colors": "dark",
         "textPosition": "left",
         "textAlignment": "left",
@@ -87,6 +96,7 @@
     },
     "logo-list": {
       "type": "image--logo-list",
+      "disabled": true,
       "blocks": {
         "logo-list-0": {
           "type": "logo_image",

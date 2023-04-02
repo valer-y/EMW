@@ -19,7 +19,7 @@
         "label-enable": true,
         "cart-style": "shopping-cart",
         "cart-number": "quantity",
-        "enable_search": true,
+        "enable_search": false,
         "overlay_header_homepage": false,
         "overlay_header_collection": false,
         "overlay_header_list_collection": false,

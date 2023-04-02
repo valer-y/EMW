@@ -127,6 +127,9 @@
                                                 {% render 'responsive-image' with block.settings.image, alt: img_alt | escape, wrapper_class: ' slideshow-desktop-as-mobile-image', allow_stretch: true, sizes: '100vw' %}
                                             {% endif %}
 
+                                            {% comment %}
+                                                ## Changes
+                                            {% endcomment %}
                                                 <div class="homepage-featured-content-box{% if overlay_text %} slideshow-mobile-overlay-text{% endif %}">
                                                     <div class="featured-content-box--border"></div>
                                                     <div class="homepage-featured-content-box-inner wow fadeInUp {% if block.settings.mobile_image == blank and section.settings.show-slide-dots %} mobile-dot-nav-spacing{% endif %}">
@@ -223,6 +226,9 @@
 	</div>
 </div>
 
+{% comment %}
+    ## Changes
+{% endcomment %}
 <div class="spacer--block">
     <div class="header--gradient-line"></div>
             <h2>“Can’t repeat the past?…Why of course you can!”</h2>

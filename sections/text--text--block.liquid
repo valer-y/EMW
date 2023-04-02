@@ -33,13 +33,23 @@
             <a href="{{ block.settings.link }}">
           {% endif %}
 
-            {% if block.settings.heading != blank %}
-              <span class="text-advert-section--header h5">{{ block.settings.heading | escape }}</span>
-            {% endif %}
+          {% if block.settings.heading != blank %}
+          <span class="text-advert-section--header h3 h2">{{ block.settings.title }}</span>
+        {% endif %}
 
-            {% if block.settings.subheading != blank %}
-              <span class="text-advert-section--sub-header">{{ block.settings.subheading | escape }}</span>
-            {% endif %}
+        {% if block.settings.heading != blank %}
+            <span class="text-advert-section--header h5">{{ block.settings.heading }}</span>
+        {% endif %}
+
+        {% if block.settings.subheading != blank %}
+            <span class="text-advert-section--sub-header">{{ block.settings.subheading }}</span>
+        {% endif %}
+
+        <br /><br />
+
+        {% if block.settings.subheading != blank %}
+            <span class="text-advert-section--sub-header">{{ block.settings.reg-text }}</span>
+        {% endif %}
 
           {% if advert_has_link %}
             </a>
@@ -65,11 +75,21 @@
             {% endif %}
 
               {% if block.settings.heading != blank %}
+                  <span class="text-advert-section--header h5">{{ block.settings.title }}</span>
+              {% endif %}
+
+              {% if block.settings.heading != blank %}
                 <span class="text-advert-section--header h5">{{ block.settings.heading }}</span>
               {% endif %}
 
               {% if block.settings.subheading != blank %}
                 <span class="text-advert-section--sub-header">{{ block.settings.subheading }}</span>
+              {% endif %}
+
+              <br /><br />
+
+              {% if block.settings.subheading != blank %}
+                <span class="text-advert-section--sub-header">{{ block.settings.reg-text }}</span>
               {% endif %}
 
             {% if advert_has_link %}
@@ -160,6 +180,26 @@
                 "pt-PT": "Anúncio"
             },
             "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": {
+                        "en": "Title"
+                    },
+                    "default": {
+                      "en": "Test"
+                    }
+                },
+                {
+                    "type": "text",
+                    "id": "reg-text",
+                    "label": {
+                        "en": "Title"
+                    },
+                    "default": {
+                      "en": "Fill text"
+                    }
+                },
                 {
                     "type": "text",
                     "id": "heading",

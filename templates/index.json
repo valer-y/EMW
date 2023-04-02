@@ -7,8 +7,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Chrysler_Building_Midtown_Manhattan_New_York_City_1932-2.jpg",
-            "title": "Share your story",
-            "text": "Here's your chance to make a great first impression",
+            "title": "The GREAT GATSBY",
+            "text": "It understood you just so far as you wanted to be understood, believed in you as you would like to believe in yourself, and assured you that it had precisely the impression of you that, at your best, you hoped to convey.",
             "button_label": "Shop now",
             "button_link": "shopify:\/\/collections",
             "caption-background": "rgba(0,0,0,0)",
@@ -39,54 +39,37 @@
         "slider-navigation-color": "#ffffff"
       }
     },
-    "collection-collection-list": {
-      "type": "collection--collection-list",
+    "text-block": {
+      "type": "text--text--block",
       "blocks": {
-        "collection-0": {
-          "type": "featured_collection",
+        "5262367f-b0d5-4e28-b4b4-c26f16d575d7": {
+          "type": "text",
           "settings": {
-            "collection": "",
-            "subheading": "Subheading",
-            "overlay-btn-text": "Shop now",
-            "show-gradient-overlay": true,
-            "overlay_font_color": "#ffffff",
-            "overlay_color": "#323232"
-          }
-        },
-        "collection-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "subheading": "Subheading",
-            "overlay-btn-text": "Shop now",
-            "show-gradient-overlay": true,
-            "overlay_font_color": "#ffffff",
-            "overlay_color": "#323232"
+            "title": "The Great Gatsby",
+            "reg-text": "Set in the Roaring Twenties, the novel follows the narrator, Nick Carraway, as he becomes embroiled in the lives of the wealthy elite on Long Island. At the center of the story is Jay Gatsby, a mysterious, enigmatic millionaire and romantic idealist who is obsessed with the beautiful and wealthy Daisy Buchanan.  The Great Gatsby, written by F. Scott Fitzgerald and published in 1925, has had a significant influence on American literature and culture. The novel is a timeless masterpiece that explores themes of love, wealth, and the American dream, and has been an inspiration for many.   The novel captures the spirit of the era, with its jazz music, flappers, and excess, and has become a touchstone for understanding the time Fitzgerald popularized as the Jazz Age and has become a standard in American literature courses, and its continued relevance speaks to its enduring legacy.",
+            "heading": "“An author ought to write for the youth of his own generation, the critics of the next, and the schoolmaster of ever afterwards.”",
+            "subheading": "—F. Scott Fitzgerald",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "collection-1"
+        "5262367f-b0d5-4e28-b4b4-c26f16d575d7"
+      ],
+      "settings": {
+        "colors": "white"
+      }
+    },
+    "featured-collection": {
+      "type": "collection--featured-collection",
+      "custom_css": [
+        ".homepage-product-grid-wrapper {justify-content: center;}"
       ],
       "settings": {
         "colors": "white",
         "title": "",
         "richtext": "",
-        "items-per-row": 2,
-        "fill-the-area": true,
-        "remove-spacing": false,
-        "section-width": "full",
-        "content-position": "below-image"
-      }
-    },
-    "featured-collection": {
-      "type": "collection--featured-collection",
-      "settings": {
-        "colors": "white",
-        "title": "",
-        "richtext": "",
-        "collection": "",
+        "collection": "gin",
         "grid-desktop": 4,
         "grid-tablet": 3,
         "grid-mobile": 2,
@@ -95,14 +78,20 @@
         "show_view_all": false
       }
     },
+    "quatation-promo": {
+      "type": "quatation--promo",
+      "settings": {
+        "main_text": "The gratest gin I've ever seen"
+      }
+    },
     "video-video-hero": {
       "type": "video--video-hero",
       "settings": {
         "url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1f45a4a46f0440d7be33dcc38d00a101.mp4",
         "desktopHeight": "550",
         "mobileHeight": "350",
-        "title": "Share your story",
-        "subheading": "Here's your chance to make a great first impression",
+        "title": "All we got",
+        "subheading": "A little party never killed nobody",
         "textAlignment": "center-left",
         "textColor": "#ffffff",
         "textShadow": false,
@@ -116,126 +105,10 @@
         "hover-button-background": "#4e4e4e"
       }
     },
-    "featured-collection-1": {
-      "type": "collection--featured-collection",
+    "quatation-promo-1": {
+      "type": "quatation--promo",
       "settings": {
-        "colors": "white",
-        "title": "",
-        "richtext": "",
-        "collection": "",
-        "grid-desktop": 4,
-        "grid-tablet": 3,
-        "grid-mobile": 2,
-        "rows": 2,
-        "show-vendor": false,
-        "show_view_all": false
-      }
-    },
-    "image-text-with-image-overlay-1": {
-      "type": "image--image-with-text-overlay",
-      "settings": {
-        "image_height": "40vw",
-        "bg_image_overlay_opacity": 0,
-        "parallax": true,
-        "title": "Share your story",
-        "text": "Add a large image with text overlay to give focus to your chosen product, collection, or blog post",
-        "colors": "dark",
-        "textPosition": "left",
-        "textAlignment": "right",
-        "heading--text-size": 36,
-        "text--text-size": 18,
-        "link": "shopify:\/\/collections\/all",
-        "button_label": "Shop now",
-        "button-text": "#ffffff",
-        "button-background": "#000000",
-        "hover-button-text": "#ffffff",
-        "hover-button-background": "#4e4e4e"
-      }
-    },
-    "logo-list": {
-      "type": "image--logo-list",
-      "blocks": {
-        "logo-list-0": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "logo-list-1": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "logo-list-2": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "logo-list-3": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo-list-0",
-        "logo-list-1",
-        "logo-list-2",
-        "logo-list-3"
-      ],
-      "settings": {
-        "colors": "accent",
-        "width": 100,
-        "title": "As seen in"
-      }
-    },
-    "countdown-timer": {
-      "type": "countdown-timer",
-      "blocks": {
-        "countdown-timer-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Countdown timer"
-          }
-        },
-        "countdown-timer-2": {
-          "type": "countdown_timer",
-          "settings": {
-            "end_date": "",
-            "end_time": "",
-            "hide_when_complete": false,
-            "time_labels": "show"
-          }
-        },
-        "countdown-timer-3": {
-          "type": "text",
-          "settings": {
-            "text": "Grab the offer before it's gone"
-          }
-        },
-        "countdown-timer-4": {
-          "type": "button",
-          "settings": {
-            "label": "Shop now",
-            "link": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "countdown-timer-1",
-        "countdown-timer-2",
-        "countdown-timer-3",
-        "countdown-timer-4"
-      ],
-      "settings": {
-        "color_scheme": "light",
-        "text_overlapping_image": false,
-        "section_width": "full",
-        "layout": "image_on_right",
-        "text_alignment": "center"
+        "main_text": "“And I like large parties. They’re so intimate. At small parties there isn’t any privacy.”"
       }
     },
     "text-testimonials": {
@@ -282,6 +155,7 @@
     },
     "image-image-with-text-1": {
       "type": "image--image-with-text",
+      "disabled": true,
       "settings": {
         "colors": "white",
         "text_overlapping_image": true,
@@ -294,12 +168,34 @@
         "button_link": "shopify:\/\/collections"
       }
     },
+    "image-text-with-image-overlay-1": {
+      "type": "image--image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image_height": "40vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": true,
+        "title": "Share your story",
+        "text": "Add a large image with text overlay to give focus to your chosen product, collection, or blog post",
+        "colors": "dark",
+        "textPosition": "left",
+        "textAlignment": "right",
+        "heading--text-size": 36,
+        "text--text-size": 18,
+        "link": "shopify:\/\/collections\/all",
+        "button_label": "Shop now",
+        "button-text": "#ffffff",
+        "button-background": "#000000",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#4e4e4e"
+      }
+    },
     "products-featured-product-1": {
       "type": "products--featured-product",
       "settings": {
         "title": "",
         "richtext": "",
-        "featured_product": "",
+        "featured_product": "gatsby",
         "product_variant_style": "swatches",
         "hide_soldout_variants": false,
         "show-giftwrap": false,
@@ -319,13 +215,13 @@
           "type": "event",
           "settings": {
             "grid_image_size": "square",
-            "day": 10,
-            "month": "Jan",
+            "day": 1,
+            "month": "Apr",
             "tbc": false,
             "day_time": "Saturday, 7:30pm",
             "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
+            "event_heading": "Frist Gatsby's bottle has reached it's owner",
+            "event_location": "Etiam tempus felis nec eleifend maximus. Curabitur tincidunt, nunc vitae bibendum vestibulum, mauris sem tincidunt metus, sed cursus urna tortor sed mi. Sed vitae molestie purus, ut congue arcu. Integer ut vestibulum dolor. Fusce luctus turpis vitae sem congue lobortis.",
             "url": "",
             "btn_text": "More info"
           }
@@ -334,13 +230,13 @@
           "type": "event",
           "settings": {
             "grid_image_size": "square",
-            "day": 10,
-            "month": "Jan",
+            "day": 28,
+            "month": "Apr",
             "tbc": false,
             "day_time": "Saturday, 7:30pm",
             "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
+            "event_heading": "Gatsby became #1 gin in Germany. Little party never killed nobody.",
+            "event_location": "Curabitur sit amet massa quis lacus aliquam efficitur. Etiam consequat odio eu massa euismod, vitae scelerisque justo porttitor. Maecenas vitae sem eu dui facilisis tristique. Praesent tristique mattis lorem, vitae eleifend orci vulputate vitae. Ut eu faucibus urna, mollis fermentum nulla.",
             "url": "",
             "btn_text": "More info"
           }
@@ -350,12 +246,12 @@
           "settings": {
             "grid_image_size": "square",
             "day": 10,
-            "month": "Jan",
+            "month": "May",
             "tbc": true,
             "day_time": "",
             "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
+            "event_heading": "Celebrating the first international bulk order",
+            "event_location": "Aliquam et purus vel libero eleifend rutrum. Aenean metus lectus, auctor ut metus at, maximus euismod est. Nunc ac semper ipsum, a sollicitudin augue. Vivamus ullamcorper eget velit id blandit. Nulla nec fringilla magna. Proin non accumsan ligula. Proin sodales sed nulla ac vulputate. Nunc imperdiet pharetra magna, ac scelerisque massa vulputate nec. Pellentesque aliquet pretium justo.",
             "url": "",
             "btn_text": "More info"
           }
@@ -381,7 +277,8 @@
         "gallery-0": {
           "type": "image",
           "settings": {
-            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/1-1.jpg",
+            "link": "#",
             "title": "",
             "subheading": "",
             "overlay-btn-text": "",
@@ -393,7 +290,8 @@
         "gallery-1": {
           "type": "image",
           "settings": {
-            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/1-2.jpg",
+            "link": "#",
             "title": "",
             "subheading": "",
             "overlay-btn-text": "",
@@ -405,7 +303,8 @@
         "gallery-2": {
           "type": "image",
           "settings": {
-            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/1-3.jpg",
+            "link": "#",
             "title": "",
             "subheading": "",
             "overlay-btn-text": "",
@@ -417,7 +316,8 @@
         "gallery-3": {
           "type": "image",
           "settings": {
-            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/1-4.jpg",
+            "link": "#",
             "title": "",
             "subheading": "",
             "overlay-btn-text": "",
@@ -433,6 +333,9 @@
         "gallery-2",
         "gallery-3"
       ],
+      "custom_css": [
+        ".homepage-gallery-background {background: var(--color-scheme-dark-background); color: var(--color-scheme-dark-text);}"
+      ],
       "settings": {
         "colors": "accent",
         "title": "Gallery",
@@ -443,13 +346,32 @@
         "content-position": "hover"
       }
     },
+    "text-text-adverts": {
+      "type": "text--text-adverts",
+      "blocks": {
+        "advert-1": {
+          "type": "text",
+          "settings": {
+            "heading": "“An author ought to write for the youth of his own generation, the critics of the next, and the schoolmaster of ever afterwards.”",
+            "subheading": "—F. Scott Fitzgerald",
+            "link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "advert-1"
+      ],
+      "settings": {
+        "colors": "dark"
+      }
+    },
     "blog-blog-posts": {
       "type": "blog--blog-posts",
       "blocks": {
         "blog": {
           "type": "blog",
           "settings": {
-            "blog": ""
+            "blog": "cocktails"
           }
         }
       },
@@ -458,56 +380,27 @@
       ],
       "settings": {
         "colors": "white",
-        "title": "From the blog",
+        "title": "Cocktail recipes",
         "richtext": "",
         "blog_show_date": false,
         "post_limit": 3
-      }
-    },
-    "text-text-adverts": {
-      "type": "text--text-adverts",
-      "blocks": {
-        "advert-0": {
-          "type": "text",
-          "settings": {
-            "heading": "What makes you different",
-            "subheading": "Shout about your unique selling points",
-            "link": "shopify:\/\/collections"
-          }
-        },
-        "advert-1": {
-          "type": "text",
-          "settings": {
-            "heading": "What makes you different",
-            "subheading": "Shout about your unique selling points",
-            "link": "shopify:\/\/collections"
-          }
-        }
-      },
-      "block_order": [
-        "advert-0",
-        "advert-1"
-      ],
-      "settings": {
-        "colors": "dark"
       }
     }
   },
   "order": [
     "image-slideshow",
-    "collection-collection-list",
+    "text-block",
     "featured-collection",
+    "quatation-promo",
     "video-video-hero",
-    "featured-collection-1",
-    "image-text-with-image-overlay-1",
-    "logo-list",
-    "countdown-timer",
+    "quatation-promo-1",
     "text-testimonials",
     "image-image-with-text-1",
+    "image-text-with-image-overlay-1",
     "products-featured-product-1",
     "events-calendar",
     "image-gallery",
-    "blog-blog-posts",
-    "text-text-adverts"
+    "text-text-adverts",
+    "blog-blog-posts"
   ]
 }
