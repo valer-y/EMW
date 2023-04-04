@@ -44,7 +44,7 @@
           <div class="grid__item large--one-quarter blog-template--individual">
             <div>
               {% if section.settings.show_author_name %}
-                {{ article.author }}<br />
+                House of Gatsby<br />
               {% endif %}
               {% if section.settings.blog_show_date %}
                 <time class="indiv-post-time" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | time_tag: format: 'date' }}</time>
