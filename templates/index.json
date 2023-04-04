@@ -7,7 +7,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/skyline_color_25_3f14e8e4-c39f-4f62-9ece-00f0f5248840.jpg",
-            "title": "The HOUSE OF GATSBY",
+            "title": "The HOUSE OF GATSBY is the proud legacy of a man who dreamed largely.",
             "text": "His GATSBY Gin is luxurious, sophisticated, and handcrafted with fresh and exotic botanicals",
             "button_label": "Shop now",
             "button_link": "shopify:\/\/collections",
@@ -37,6 +37,12 @@
         "show-slide-dots": true,
         "show-slide-arrows": false,
         "slider-navigation-color": "#ffffff"
+      }
+    },
+    "quatation-promo-2": {
+      "type": "quatation--promo",
+      "settings": {
+        "main_text": "“Can’t repeat the past?…Why of course you can!”"
       }
     },
     "text-block": {
@@ -389,6 +395,7 @@
   },
   "order": [
     "image-slideshow",
+    "quatation-promo-2",
     "text-block",
     "featured-collection",
     "quatation-promo",

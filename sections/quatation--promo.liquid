@@ -3,9 +3,37 @@
 {% endcomment %}
 <div class="spacer--block">
     <div class="header--gradient-line"></div>
-            <h2>{{ section.settings.main_text }}</h2>
+    <h2>{{ section.settings.main_text }}</h2>
     <div class="header--gradient-line"></div>
 </div>
+
+<style>
+    .spacer--block {
+        min-height: 160px;
+        padding: 6px 0;
+        width: 100%;
+        background-color: #1d1d1d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .spacer--block h2 {
+        font-size: 29px;
+        margin: 0 auto;
+        color: #aaaaaa;
+    }
+
+    .spacer--block h2 {
+        padding: 0 30px;
+    }
+
+    @media (max-width: 768px) {
+        .spacer--block h2 {
+            font-size: 22px;
+        }
+    }
+</style>
 
 {% schema %}
     {

@@ -155,6 +155,13 @@
 
                                                 <style>
 
+                                                    .featured-image--block {
+                                                        height: 100%;
+                                                        background: url(https://cdn.shopify.com/s/files/1/0738/7722/5754/files/GTSB_Visualisierung_v1.png?v=1680601558) center center no-repeat;
+                                                        width: 60%;
+                                                        background-size: contain;
+                                                    }
+                                                
                                                     .featured-content-box--border {
                                                         height: 100%;
                                                         width: 100%;
@@ -167,7 +174,7 @@
                                                     .homepage-slider-container .homepage-featured-content-box {
                                                         width: auto;
                                                         right: 10vw;
-                                                        max-width: 390px;
+                                                        max-width: 550px;
                                                     }
 
                                                     .homepage-featured-content-box-inner {
@@ -177,6 +184,7 @@
 
                                                     .homepage-featured-content-box-inner {
                                                         padding: 40px 40px;
+                                                        display: flex;
                                                     }
                                                     
                                                     .feature--inner-content {
@@ -229,38 +237,11 @@
 	</div>
 </div>
 
-{% comment %}
-    ## Changes
-{% endcomment %}
-<div class="spacer--block">
-    <div class="header--gradient-line"></div>
-            <h2>“Can’t repeat the past?…Why of course you can!”</h2>
-    <div class="header--gradient-line"></div>
-</div>
-
 <style>
     .homepage-sections--title {
         text-transform: unset;
     }
     
-    .spacer--block {
-        height: 160px;
-        padding: 6px 0;
-        width: 100%;
-        background-color: #1d1d1d;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .spacer--block h2 {
-        font-size: 29px;
-        margin: 0 auto;
-        color: #aaaaaa;
-    }
-
-
-
 	@media screen and (min-width: 768px) {
 	  .slider-section--{{ section.id }} h2.homepage-sections--title{
 	    font-size: {{ section.settings.caption-heading-size }}px;
