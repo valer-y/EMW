@@ -21,7 +21,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "Contact us"
+            "title": "Contact us",
+            "richtext": ""
           }
         },
         "newsletter": {
@@ -38,12 +39,16 @@
         "text",
         "newsletter"
       ],
+      "custom_css": [
+        ".footer-email-input::placeholder {color: #5e5e5e;"
+      ],
       "settings": {
         "alignment": "left"
       }
     },
     "footer-bottom": {
       "type": "footer-bottom",
+      "disabled": true,
       "settings": {
         "show_methods_of_payment": true,
         "alignment": "left",

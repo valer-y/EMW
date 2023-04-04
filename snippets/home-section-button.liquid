@@ -1,5 +1,5 @@
 {% if link != blank and label != blank %}
-    <div>
+    <div class="action--button">
         <a
             class="homepage-section-btn"
             href="{{ link }}"
@@ -12,3 +12,10 @@
         </a>
     </div>
 {% endif %}
+
+<style>
+    .action--button {
+        position: relative;
+        z-index: 1000;
+    }
+</style>

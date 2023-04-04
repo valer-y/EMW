@@ -11,7 +11,7 @@
       "type": "header",
       "settings": {
         "sticky_header": true,
-        "logo": "shopify:\/\/shop_images\/Bildschirmfoto_2020-12-17_um_13.44.35.png",
+        "logo": "shopify:\/\/shop_images\/photo_2023-04-04_06-09-00.jpg",
         "logo-placement": "left",
         "logo_max_width": 200,
         "logo_padding": 10,
@@ -19,7 +19,7 @@
         "label-enable": true,
         "cart-style": "shopping-cart",
         "cart-number": "quantity",
-        "enable_search": true,
+        "enable_search": false,
         "overlay_header_homepage": false,
         "overlay_header_collection": false,
         "overlay_header_list_collection": false,

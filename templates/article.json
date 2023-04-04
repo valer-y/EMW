@@ -2,7 +2,11 @@
   "sections": {
     "main": {
       "type": "template--article",
+      "custom_css": [
+        ".wrapper-padded {padding-top: 30px;}"
+      ],
       "settings": {
+        "article-sidebar-description": "",
         "blog-sidebar-link": "",
         "show_blog_tags": false,
         "show_recent_posts": true,
