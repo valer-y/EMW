@@ -67,9 +67,9 @@
       "settings": {
         "colors": "light",
         "title": "",
-        "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.<\/p>",
+        "text": "<p>If you still have any questions don't hesitate to ask or find an answer in FAQ section<\/p>",
         "button_label": "Learn more",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify:\/\/pages\/contact"
       }
     },
     "image-with-text-overlay": {

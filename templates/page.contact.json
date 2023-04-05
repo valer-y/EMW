@@ -7,7 +7,7 @@
         "image_height": "30vw",
         "bg_image_overlay_opacity": 20,
         "parallax": true,
-        "title": "Share your story",
+        "title": "Answering your questions",
         "text": "",
         "colors": "light",
         "textPosition": "center",
@@ -83,7 +83,7 @@
         "section-width": "content",
         "layout": "left",
         "text_alignment": "center",
-        "title": "Share brand or product details",
+        "title": "Excelense of GATSBY Gin",
         "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
         "button_label": "",
         "button_link": ""

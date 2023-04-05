@@ -8,12 +8,19 @@
     "rich-text": {
       "type": "text--rich-text",
       "settings": {
-        "colors": "accent"
+        "colors": "accent",
+        "title": "Welcome to our store",
+        "text": "<p>Grab the possibility to enjoy reach taste and dilicious flawour of Gatsby gin.<\/p>",
+        "button_label": "",
+        "button_link": ""
       }
     },
     "featured-product": {
       "type": "products--featured-product",
       "settings": {
+        "title": "Featured product",
+        "richtext": "",
+        "featured_product": "gatsby",
         "product_variant_style": "dropdowns",
         "hide_soldout_variants": false,
         "show-giftwrap": false,
