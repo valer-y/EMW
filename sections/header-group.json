@@ -30,10 +30,16 @@
         "main_linklist": "main-menu",
         "dropdown_alignment": "left"
       }
+    },
+    "98ce0f03-93b3-417c-8ccf-c55177afe3de": {
+      "type": "advanced-layout--custom-html",
+      "settings": {
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "98ce0f03-93b3-417c-8ccf-c55177afe3de"
   ]
 }

@@ -8,32 +8,25 @@
     "collection-list": {
       "type": "collection--collection-list",
       "blocks": {
-        "1646003943dd939117-0": {
-          "type": "featured_collection",
-          "settings": {
-            "subheading": ""
-          }
-        },
-        "1646003943dd939117-1": {
-          "type": "featured_collection",
-          "settings": {
-            "subheading": ""
-          }
-        },
         "1646003943dd939117-2": {
           "type": "featured_collection",
           "settings": {
-            "subheading": ""
+            "collection": "gin",
+            "subheading": "",
+            "overlay-btn-text": "Shop now",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#ffffff",
+            "overlay_color": "#323232"
           }
         }
       },
       "block_order": [
-        "1646003943dd939117-0",
-        "1646003943dd939117-1",
         "1646003943dd939117-2"
       ],
       "settings": {
         "colors": "white",
+        "title": "Featured Collections",
+        "richtext": "",
         "items-per-row": 3,
         "fill-the-area": true,
         "remove-spacing": false,

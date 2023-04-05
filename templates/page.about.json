@@ -3,9 +3,12 @@
     "image-with-text-overlay": {
       "type": "image--image-with-text-overlay",
       "settings": {
+        "image": "shopify:\/\/shop_images\/113.jpg",
         "image_height": "30vw",
         "bg_image_overlay_opacity": 10,
         "parallax": false,
+        "title": "STORY OF DISCILLING THE PERFECT GIN",
+        "text": "",
         "colors": "light",
         "textPosition": "center",
         "textAlignment": "center",
@@ -31,11 +34,23 @@
       "type": "image--image-with-text",
       "settings": {
         "colors": "white",
+        "image": "shopify:\/\/shop_images\/DSC_9110Gatsby2016-Turnier-r.jpg",
         "text_overlapping_image": false,
         "section-width": "content",
         "layout": "left",
         "text_alignment": "left",
         "title": "",
+        "text": "<p>Gin originated as a medicinal liquor made by monks and alchemists across Europe, particularly in southern Italy and the Netherlands, to provide \"aqua vita\" from distillates of grapes and grains.<br\/><br\/>But only we are able to bottle the taste of Amercans' roaring 20th.<\/p>",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "rich-text": {
+      "type": "text--rich-text",
+      "settings": {
+        "colors": "white",
+        "title": "",
+        "text": "<p>Since 1980 Integer a magna pharetra, rutrum elit nec, consectetur tellus. Suspendisse potenti. Cras arcu odio, hendrerit at tellus at, vulputate mollis ex. Donec aliquam dictum faucibus. Proin sed rutrum dolor. Praesent posuere purus sed lacus efficitur pharetra. Nunc suscipit eget felis a mattis. Donec accumsan ipsum justo, id finibus augue pulvinar vulputate.<\/p><p>Donec gravida orci a tellus mattis, a viverra elit fermentum. Suspendisse non odio lorem. Etiam viverra semper tellus ut ornare. Donec ac arcu volutpat, varius diam a, pulvinar arcu. Mauris maximus erat tellus, tincidunt consectetur purus molestie non. Fusce sapien dui, luctus sit amet vehicula sit amet, vulputate ac massa. Curabitur sed urna at ligula volutpat lacinia. Duis sed elementum nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vestibulum massa non luctus scelerisque. Phasellus vel ipsum urna. Mauris sit amet arcu non lacus convallis pharetra. Curabitur non vehicula nunc. Nam aliquet ornare ornare. Etiam vitae urna ac tortor mollis pulvinar id lobortis risus. Proin at libero quis leo fringilla faucibus.<\/p><p>Duis interdum neque euismod mi dignissim vehicula sed vel nulla. Integer sit amet nisl vitae risus maximus maximus. Sed vitae tellus dui. Praesent id faucibus turpis, vel ultrices mauris. Proin magna lacus, egestas at tempus in, imperdiet ut sem. Cras vel eros accumsan, luctus tortor ac, consequat nulla. Nam at maximus lorem. Donec eget fringilla massa. Ut porta, nisl sagittis tincidunt egestas, libero odio tincidunt enim, lobortis commodo massa odio et libero. Nam non lorem luctus, cursus magna non, tempor mauris. Nunc vitae imperdiet turpis, in finibus nunc. Nam efficitur, nulla non finibus ultricies, sem erat facilisis purus, quis aliquet est ex eget justo.<\/p>",
         "button_label": "",
         "button_link": ""
       }
@@ -46,7 +61,10 @@
         "image--gallery-0": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/1-4.jpg",
             "link": "",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -56,7 +74,10 @@
         "image--gallery-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/1-2.jpg",
             "link": "",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -66,7 +87,10 @@
         "image--gallery-2": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/1-1.jpg",
             "link": "",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -76,7 +100,10 @@
         "image--gallery-3": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/1-3.jpg",
             "link": "",
+            "title": "",
+            "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": true,
             "overlay_font_color": "#ffffff",
@@ -102,33 +129,30 @@
     },
     "image-with-text-1": {
       "type": "image--image-with-text",
+      "disabled": true,
       "settings": {
         "colors": "white",
         "text_overlapping_image": true,
         "section-width": "full",
         "layout": "right",
         "text_alignment": "left",
-        "button_label": "",
-        "button_link": ""
-      }
-    },
-    "rich-text": {
-      "type": "text--rich-text",
-      "settings": {
-        "colors": "white",
-        "title": "",
+        "title": "Share brand or product details",
+        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
         "button_label": "",
         "button_link": ""
       }
     },
     "image-with-text-2": {
       "type": "image--image-with-text",
+      "disabled": true,
       "settings": {
         "colors": "white",
         "text_overlapping_image": true,
         "section-width": "full",
         "layout": "left",
         "text_alignment": "left",
+        "title": "Share brand or product details",
+        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
         "button_label": "",
         "button_link": ""
       }
@@ -138,6 +162,7 @@
       "settings": {
         "colors": "white",
         "title": "",
+        "text": "<h4>Enjoy neverending party with Gatsby<\/h4>",
         "button_label": "",
         "button_link": ""
       }
@@ -145,13 +170,18 @@
     "video-hero": {
       "type": "video--video-hero",
       "settings": {
+        "url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1f45a4a46f0440d7be33dcc38d00a101.mp4",
         "desktopHeight": "450",
         "mobileHeight": "250",
+        "title": "All we got",
+        "subheading": "A little party never killed nobody",
         "textAlignment": "center",
         "textColor": "#ffffff",
         "textShadow": false,
         "heading--text-size": 26,
         "subheading--text-size": 18,
+        "link": "",
+        "button_label": "",
         "button-text": "#ffffff",
         "button-background": "#000000",
         "hover-button-text": "#ffffff",
@@ -192,10 +222,12 @@
     },
     "collection-list": {
       "type": "collection--collection-list",
+      "disabled": true,
       "blocks": {
         "collection-list-0": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "subheading": "",
             "overlay-btn-text": "Shop now",
             "show-gradient-overlay": true,
@@ -206,6 +238,7 @@
         "collection-list-1": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "subheading": "",
             "overlay-btn-text": "Shop now",
             "show-gradient-overlay": true,
@@ -216,6 +249,7 @@
         "collection-list-2": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "subheading": "",
             "overlay-btn-text": "Shop now",
             "show-gradient-overlay": true,
@@ -245,9 +279,9 @@
     "image-with-text-overlay",
     "main",
     "image-with-text",
+    "rich-text",
     "image-gallery",
     "image-with-text-1",
-    "rich-text",
     "image-with-text-2",
     "rich-text-1",
     "video-hero",
