@@ -134,7 +134,11 @@
                                                     <div class="featured-content-box--border"></div>
                                                     <div class="homepage-featured-content-box-inner wow fadeInUp {% if block.settings.mobile_image == blank and section.settings.show-slide-dots %} mobile-dot-nav-spacing{% endif %}">
                                                         
-                                                        <div class="featured-image--block"></div>    
+                                                        <div class="featured-image--block">
+                                                            {% if block.settings.hero_icon != blank %}
+                                                                <img id="featured-image" src="{{ block.settings.hero_icon | img_url: 'large' }}" alt="">
+                                                            {% endif %}
+                                                        </div>    
 
                                                         <div class="feature-content-box--border feature--inner-content">
                                                         {% if block.settings.title != blank %}
@@ -157,9 +161,15 @@
 
                                                     .featured-image--block {
                                                         height: 100%;
-                                                        background: url(https://cdn.shopify.com/s/files/1/0738/7722/5754/files/GTSB_Visualisierung_v1.png?v=1680601558) center center no-repeat;
                                                         width: 60%;
                                                         background-size: contain;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                    }
+
+                                                    #featured-image {
+                                                        width: 100%;
+                                                        height: auto;
                                                     }
                                                 
                                                     .featured-content-box--border {
@@ -561,6 +571,18 @@
                         "es": "Recomendado 2000 x 900 px",
                         "fr": "2000 x 900 px recommandé",
                         "pt-PT": "2000 x 900px, recomendado"
+                    }
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hero_icon",
+                    "label": {
+                        "en": "Hero Image (Optional)",
+                        "de": "Hero Bild (optional)"
+                    },
+                    "info": {
+                        "en": "1400 x 1400px recommended",
+                        "de": "1400 x 1400 px empfohlen"
                     }
                 },
                 {
