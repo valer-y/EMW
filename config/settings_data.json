@@ -1,8 +1,8 @@
 {
   "current": {
-    "color_body_text": "#242424",
-    "color_primary": "#333333",
-    "color_body_bg": "#fff",
+    "color_body_text": "#1d1d1d",
+    "color_primary": "#686868",
+    "color_body_bg": "#ffffff",
     "color_body_bg_secondary": "#f8f8f8",
     "sale_badge_color": "#E95050",
     "sale_price_color": "#919191",
@@ -65,8 +65,9 @@
     "giftwrap_gift_note": true,
     "enable-additional-checkout-buttons": true,
     "show_discount": "hide",
-    "product-grid": "square",
+    "product-grid": "natural",
     "hover-effect": true,
+    "giftwrap_product_selector": "",
     "predictive_search_enabled": true,
     "predictive_search_products": true,
     "predictive_search_pages": true,

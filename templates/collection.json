@@ -54,6 +54,9 @@
         "product_card_price",
         "product_card_button"
       ],
+      "custom_css": [
+        ".product-medias__media[data-media-type=image] img {width: 80%; height: auto; }"
+      ],
       "settings": {
         "desktop-products-per-row": 3,
         "tablet-products-per-row": 2,
@@ -63,8 +66,8 @@
         "desktop_position": "sidebar",
         "enable_collection_title": false,
         "enable_collection_description": true,
-        "enable_filtering": true,
-        "enable_sorting": true
+        "enable_filtering": false,
+        "enable_sorting": false
       }
     }
   },

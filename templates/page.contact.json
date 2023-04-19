@@ -3,11 +3,11 @@
     "image-with-text-overlay": {
       "type": "image--image-with-text-overlay",
       "settings": {
-        "image": "shopify:\/\/shop_images\/DSC_9110Gatsby2016-Turnier-r.jpg",
+        "image": "shopify:\/\/shop_images\/cabinet.jpg",
         "image_height": "30vw",
         "bg_image_overlay_opacity": 20,
         "parallax": true,
-        "title": "Answering your questions",
+        "title": "",
         "text": "",
         "colors": "light",
         "textPosition": "center",
@@ -28,36 +28,64 @@
         "accordion-0": {
           "type": "tab_content",
           "settings": {
-            "question": "What makes Gatsby gin so special?",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris posuere, malesuada leo vel, ornare leo. In id urna vestibulum, finibus diam in, lobortis mi. Sed bibendum mi quis urna dictum convallis. Quisque posuere auctor luctus. Suspendisse eget massa volutpat, scelerisque nunc sed, tristique dolor. Sed leo eros, hendrerit sed nulla eget, elementum mollis libero. Suspendisse nec aliquet tortor. Phasellus rhoncus nec justo sit amet commodo.<\/p>"
+            "question": "Whatis the HOUSE OF GATSBY?",
+            "text": "<p>The HOUSE OF GATSBY follows in the tradition of Jay Gatsby. His passion for giving his guests a luxurious and unforgettable time drove him to create the best-tasting drinks in the world. <\/p><p>GATSBY Gin, GATSBY Rum, GATSBY Absinthe, and many other high-quality products continue this tradition.<\/p>"
           }
         },
         "accordion-1": {
           "type": "tab_content",
           "settings": {
-            "question": "Does your company planning to sell other beverages?",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris posuere, malesuada leo vel, ornare leo. In id urna vestibulum, finibus diam in, lobortis mi. Sed bibendum mi quis urna dictum convallis. Quisque posuere auctor luctus. Suspendisse eget massa volutpat, scelerisque nunc sed, tristique dolor. Sed leo eros, hendrerit sed nulla eget, elementum mollis libero. Suspendisse nec aliquet tortor. Phasellus rhoncus nec justo sit amet commodo.<\/p>"
+            "question": "Whatmakes GATSBY Gin so special?",
+            "text": "<p>Jay Gatsby's gin is handmade and refined with the finest botanicals. His gin sets a new standard for taste, exclusivity, and style. The exact recipe is a closely guarded secret, but botanicals like Marc de<br\/>Champagne and other premium ingredients make it a masterpiece that pairs well with champagne, on the rocks, with tonics, or in gin<br\/>cocktails.<\/p>"
           }
         },
         "accordion-2": {
           "type": "tab_content",
           "settings": {
-            "question": "Can I find a bar with your gin in Hamburg?",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris posuere, malesuada leo vel, ornare leo. In id urna vestibulum, finibus diam in, lobortis mi. Sed bibendum mi quis urna dictum convallis. Quisque posuere auctor luctus. Suspendisse eget massa volutpat, scelerisque nunc sed, tristique dolor. Sed leo eros, hendrerit sed nulla eget, elementum mollis libero. Suspendisse nec aliquet tortor. Phasellus rhoncus nec justo sit amet commodo.<\/p>"
+            "question": "Wheredoes the unique Art Deco bottle design come from?",
+            "text": "<p>The unique Art Deco design of the GATSBY bottle was created by<br\/>world-leading designers and inspired by the most beautiful example of the Art Deco era of the 20th century in New York: the Chrysler Building.<\/p>"
           }
         },
         "accordion-3": {
           "type": "tab_content",
           "settings": {
-            "question": "Do you have a showroom?",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris posuere, malesuada leo vel, ornare leo. In id urna vestibulum, finibus diam in, lobortis mi. Sed bibendum mi quis urna dictum convallis. Quisque posuere auctor luctus. Suspendisse eget massa volutpat, scelerisque nunc sed, tristique dolor. Sed leo eros, hendrerit sed nulla eget, elementum mollis libero. Suspendisse nec aliquet tortor. Phasellus rhoncus nec justo sit amet commodo.<\/p>"
+            "question": "Howis GATSBY Gin made?",
+            "text": "<p>One of the oldest and most prestigious distilleries in the world,<br\/>operated by a family dynasty since the 18th century, shares Jay<br\/>Gatsby's passion and produces the unique spirits for the HOUSE OF<br\/>GATSBY by hand.<br\/><br\/><br\/><br\/><br\/><\/p>"
           }
         },
         "accordion-4": {
           "type": "tab_content",
           "settings": {
-            "question": "How can I place a bulk order?",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris posuere, malesuada leo vel, ornare leo. In id urna vestibulum, finibus diam in, lobortis mi. Sed bibendum mi quis urna dictum convallis. Quisque posuere auctor luctus. Suspendisse eget massa volutpat, scelerisque nunc sed, tristique dolor. Sed leo eros, hendrerit sed nulla eget, elementum mollis libero. Suspendisse nec aliquet tortor. Phasellus rhoncus nec justo sit amet commodo.<\/p>"
+            "question": "Whatis the GATSBY CLUB Edition?",
+            "text": "<p>The CLUB EDITION is made with the same passion and ingredients. The gin has slightly less alcohol at 40% and a more modern look.<\/p>"
+          }
+        },
+        "2f5d9e8d-86f4-4838-9313-e0e27408332d": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How do I order GATSBY Gin for resale?",
+            "text": "<p>Handpicked sellers, bars, and restaurants have the opportunity to offer our gin and other spirits from the HOUSE OF GATSBY. The exclusive character of our product, the style of Jay Gatsby, and the partner must match. Please contact us.<\/p>"
+          }
+        },
+        "17886208-c392-4ee8-9271-c26f4675cbfb": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How do I order larger quantities of GATSBY Gin?",
+            "text": "<p>If you are planning an exclusive GATSBY event and share Jay Gatsby's passion, please contact us.<\/p>"
+          }
+        },
+        "e90baef0-6c7c-49a5-beed-a431ce03e04d": {
+          "type": "tab_content",
+          "settings": {
+            "question": "When will other types of alcohol be offered?",
+            "text": "<p>Jay Gatsby's gin comes first, GATSBY Rum and GATSBY Absinthe will follow soon. Other spirits and tobacco products are also in planning.<\/p>"
+          }
+        },
+        "b126f882-5b5a-47c8-abfb-4165c5e4a1cc": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Whencan I buy GATSBY Gin abroad?",
+            "text": "<p>Jay Gatsby is a citizen of the world! His passion, his dreams, his<br\/>hospitality, and his style are known all over the world and are lived<br\/>by many enthusiasts. The market launch in almost all regions of the<br\/>world has already begun or is being planned.<\/p>"
           }
         }
       },
@@ -66,7 +94,11 @@
         "accordion-1",
         "accordion-2",
         "accordion-3",
-        "accordion-4"
+        "accordion-4",
+        "2f5d9e8d-86f4-4838-9313-e0e27408332d",
+        "17886208-c392-4ee8-9271-c26f4675cbfb",
+        "e90baef0-6c7c-49a5-beed-a431ce03e04d",
+        "b126f882-5b5a-47c8-abfb-4165c5e4a1cc"
       ],
       "settings": {
         "colors": "white",
@@ -78,7 +110,7 @@
       "type": "image--image-with-text",
       "settings": {
         "colors": "light",
-        "image": "shopify:\/\/shop_images\/4.jpg",
+        "image": "shopify:\/\/shop_images\/DSC_3132.jpg",
         "text_overlapping_image": false,
         "section-width": "content",
         "layout": "left",
@@ -95,7 +127,7 @@
         "gallery-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-1.jpg",
+            "image": "shopify:\/\/shop_images\/master-pnp-ds-00100-00150u_115800.jpg",
             "link": "#",
             "title": "",
             "subheading": "",
@@ -108,7 +140,7 @@
         "gallery-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-2.jpg",
+            "image": "shopify:\/\/shop_images\/master-pnp-npcc-05700-05760u_114158.jpg",
             "link": "#",
             "title": "",
             "subheading": "",
@@ -121,7 +153,7 @@
         "gallery-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-3.jpg",
+            "image": "shopify:\/\/shop_images\/master-pnp-npcc-10400-10443u_frau_verkehr_113947.jpg",
             "link": "#",
             "title": "",
             "subheading": "",
@@ -134,7 +166,7 @@
         "gallery-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-4.jpg",
+            "image": "shopify:\/\/shop_images\/master-pnp-cph-3b40000-3b44000-3b44000-3b44030u_115706_1.jpg",
             "link": "#",
             "title": "",
             "subheading": "",
@@ -203,7 +235,7 @@
         "section_color_scheme": "white",
         "form_width": "full-width",
         "form_title": "Contact us",
-        "form_description": "<p>Have a question, or want a product recommendation? Get in touch.<\/p>"
+        "form_description": "<p>You can send us your question or request.<\/p>"
       }
     }
   },
