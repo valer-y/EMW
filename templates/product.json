@@ -6,8 +6,8 @@
         "media": {
           "type": "media",
           "settings": {
-            "image_size": "medium",
-            "image-display": "thumbnails",
+            "image_size": "small",
+            "image-display": "full-size",
             "thumbnail_position": "below",
             "enable_image_zoom": true,
             "enable_video_loop": false
@@ -51,6 +51,7 @@
         },
         "local-pickup": {
           "type": "local_pickup",
+          "disabled": true,
           "settings": {
           }
         },
@@ -58,13 +59,20 @@
           "type": "collapsible-tab",
           "settings": {
             "icon": "heart",
+            "heading": "Collapsible tab",
             "open_close_icon": "caret",
+            "text": "<p>Share some information about your product<\/p>",
             "page": ""
           }
         },
         "cross-sells": {
           "type": "cross-sells",
           "settings": {
+            "title": "Don't forget these...",
+            "cross_sell_product_1": "",
+            "cross_sell_product_2": "",
+            "cross_sell_product_3": "",
+            "cross_sell_bg": "#f8f8f8"
           }
         },
         "trust_badges": {

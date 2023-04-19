@@ -46,9 +46,13 @@
               {% assign crop = 'center' %}
             {% endif %}
             {% assign img_alt =  block.settings.image.alt | default: shop.name %}
-            {% render 'responsive-image' with block.settings.image, alt: img_alt | escape crop: 'center', default_size: '200x200', force_height: 200, force_aspect: 1, allow_stretch: true %}
+            {% render 'responsive-image' with block.settings.image, alt: img_alt | escape crop: 'center', default_size: '150x150', force_height: 150, force_aspect: 1, allow_stretch: true %}
           </div>
         {% endif %}
+
+        {% comment %}
+
+        Remove testimonials
 
         {% if block.settings.stars > 0 %}
           <div class="testimonials--star-wrapper">
@@ -58,6 +62,7 @@
             {% endfor %}
           </div>
         {% endif %}
+        {% endcomment %}
 
         {% if block.settings.testimonial_text != blank %}
           <div class="testimonials--text-wrapper">
@@ -65,9 +70,16 @@
           </div>
         {% endif %}
 
+
+        {%  comment  %}  
+
+        Customers name
+
         {% if block.settings.customer_name != blank %}
           <span class="h6">{{ block.settings.customer_name | escape }}</span>
         {% endif %}
+
+        {% endcomment %}
 
         {% if testimonial_has_link %}
           </a>
@@ -77,6 +89,21 @@
     {% endfor %}
   </div>
 </div>
+
+<style>
+
+.testimonial-section--image img {
+    max-width: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    max-height: 0px;
+}
+
+.homepage-sections--title {
+  margin-bottom: 45px;
+}
+
+</style>
 
 </div>
 

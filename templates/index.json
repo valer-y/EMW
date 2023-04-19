@@ -7,7 +7,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/skyline_color_25_3f14e8e4-c39f-4f62-9ece-00f0f5248840.jpg",
-            "title": "The HOUSE OF GATSBY is the proud legacy of a man who dreamed largely.",
+            "hero_icon": "shopify:\/\/shop_images\/GTSB_Visualisierung_v1.png",
+            "title": "The HOUSE OF GATSBY is the proud legacy of a man who dreamed large.",
             "text": "His GATSBY Gin is luxurious, sophisticated, and handcrafted with fresh and exotic botanicals",
             "button_label": "Shop now",
             "button_link": "shopify:\/\/collections",
@@ -20,10 +21,29 @@
             "captionHorizontal": "right",
             "captionAlignment": "right"
           }
+        },
+        "d3e5475b-b085-4916-aa90-dc30772b8947": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "title": "Share your story",
+            "text": "Here's your chance to make a great first impression",
+            "button_label": "",
+            "button_link": "",
+            "caption-background": "rgba(0,0,0,0)",
+            "caption-text": "#ffffff",
+            "button-text": "#ffffff",
+            "button-background": "#333333",
+            "hover-button-text": "#ffffff",
+            "hover-button-background": "#4e4e4e",
+            "captionHorizontal": "left",
+            "captionAlignment": "left"
+          }
         }
       },
       "block_order": [
-        "slideshow-0"
+        "slideshow-0",
+        "d3e5475b-b085-4916-aa90-dc30772b8947"
       ],
       "settings": {
         "slider-animation": "slide",
@@ -45,47 +65,9 @@
         "main_text": "“Can’t repeat the past?…Why of course you can!”"
       }
     },
-    "text-block": {
-      "type": "text--text--block",
-      "blocks": {
-        "5262367f-b0d5-4e28-b4b4-c26f16d575d7": {
-          "type": "text",
-          "settings": {
-            "title": "The Great Gatsby",
-            "reg-text": "Set in the Roaring Twenties, the novel follows the narrator, Nick Carraway, as he becomes embroiled in the lives of the wealthy elite on Long Island. At the center of the story is Jay Gatsby, a mysterious, enigmatic millionaire and romantic idealist who is obsessed with the beautiful and wealthy Daisy Buchanan. <br><br> The Great Gatsby, written by F. Scott Fitzgerald and published in 1925, has had a significant influence on American literature and culture. The novel is a timeless masterpiece that explores themes of love, wealth, and the American dream, and has been an inspiration for many.  <br><br> The novel captures the spirit of the era, with its jazz music, flappers, and excess, and has become a touchstone for understanding the time Fitzgerald popularized as the Jazz Age and has become a standard in American literature courses, and its continued relevance speaks to its enduring legacy.",
-            "heading": "“An author ought to write for the youth of his own generation, the critics of the next, and the schoolmaster of ever afterwards.”",
-            "subheading": "—F. Scott Fitzgerald",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "5262367f-b0d5-4e28-b4b4-c26f16d575d7"
-      ],
-      "settings": {
-        "colors": "white"
-      }
-    },
-    "featured-collection": {
-      "type": "collection--featured-collection",
-      "custom_css": [
-        ".homepage-product-grid-wrapper {justify-content: center;}"
-      ],
-      "settings": {
-        "colors": "white",
-        "title": "",
-        "richtext": "",
-        "collection": "gin",
-        "grid-desktop": 4,
-        "grid-tablet": 3,
-        "grid-mobile": 2,
-        "rows": 1,
-        "show-vendor": false,
-        "show_view_all": false
-      }
-    },
     "quatation-promo": {
       "type": "quatation--promo",
+      "disabled": true,
       "settings": {
         "main_text": "The gratest gin I've ever seen"
       }
@@ -123,6 +105,7 @@
         "testimonials-0": {
           "type": "text",
           "settings": {
+            "image": "shopify:\/\/shop_images\/customer_1.jpg",
             "testimonial_text": "<p>Use this section to add reviews or testimonials from your store’s happy customers<\/p>",
             "customer_name": "John Smith",
             "link": "shopify:\/\/collections",
@@ -132,6 +115,7 @@
         "testimonials-1": {
           "type": "text",
           "settings": {
+            "image": "shopify:\/\/shop_images\/customer_1.jpg",
             "testimonial_text": "<p>Use this section to add reviews or testimonials from your store’s happy customers<\/p>",
             "customer_name": "John Smith",
             "link": "shopify:\/\/collections",
@@ -141,6 +125,7 @@
         "testimonials-2": {
           "type": "text",
           "settings": {
+            "image": "shopify:\/\/shop_images\/customer_1.jpg",
             "testimonial_text": "<p>Use this section to add reviews or testimonials from your store’s happy customers<\/p>",
             "customer_name": "John Smith",
             "link": "shopify:\/\/collections",
@@ -176,14 +161,19 @@
     },
     "image-text-with-image-overlay-1": {
       "type": "image--image-with-text-overlay",
-      "disabled": true,
+      "custom_css": [
+        ".image-with-text-overlay__content-box {background-color: black !important;}",
+        "#img-text-2 {flex-direction: column; justify-content: center;}",
+        "#img-text-2:last-child {margin-top: 20px;}"
+      ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Gatsby_Flasche_1_3.jpg",
         "image_height": "40vw",
         "bg_image_overlay_opacity": 0,
         "parallax": true,
         "title": "Share your story",
         "text": "Add a large image with text overlay to give focus to your chosen product, collection, or blog post",
-        "colors": "dark",
+        "colors": "accent",
         "textPosition": "left",
         "textAlignment": "right",
         "heading--text-size": 36,
@@ -191,7 +181,7 @@
         "link": "shopify:\/\/collections\/all",
         "button_label": "Shop now",
         "button-text": "#ffffff",
-        "button-background": "#000000",
+        "button-background": "#686868",
         "hover-button-text": "#ffffff",
         "hover-button-background": "#4e4e4e"
       }
@@ -212,6 +202,48 @@
         "show_smart_checkout": true,
         "image-placement": "left",
         "enable_video_loop": false
+      }
+    },
+    "text-block": {
+      "type": "text--text--block",
+      "blocks": {
+        "5262367f-b0d5-4e28-b4b4-c26f16d575d7": {
+          "type": "text",
+          "settings": {
+            "title": "The Great Gatsby",
+            "reg-text": "Set in the Roaring Twenties, the novel follows the narrator, Nick Carraway, as he becomes embroiled in the lives of the wealthy elite on Long Island. At the center of the story is Jay Gatsby, a mysterious, enigmatic millionaire and romantic idealist who is obsessed with the beautiful and wealthy Daisy Buchanan. <br><br> The Great Gatsby, written by F. Scott Fitzgerald and published in 1925, has had a significant influence on American literature and culture. The novel is a timeless masterpiece that explores themes of love, wealth, and the American dream, and has been an inspiration for many.  <br><br> The novel captures the spirit of the era, with its jazz music, flappers, and excess, and has become a touchstone for understanding the time Fitzgerald popularized as the Jazz Age and has become a standard in American literature courses, and its continued relevance speaks to its enduring legacy.",
+            "heading": "“An author ought to write for the youth of his own generation, the critics of the next, and the schoolmaster of ever afterwards.”",
+            "subheading": "—F. Scott Fitzgerald",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5262367f-b0d5-4e28-b4b4-c26f16d575d7"
+      ],
+      "custom_css": [
+        ".text-advert-section .grid__item {margin-top: 50px;}"
+      ],
+      "settings": {
+        "colors": "white"
+      }
+    },
+    "featured-collection": {
+      "type": "collection--featured-collection",
+      "custom_css": [
+        ".homepage-product-grid-wrapper {justify-content: center;}"
+      ],
+      "settings": {
+        "colors": "white",
+        "title": "",
+        "richtext": "",
+        "collection": "main",
+        "grid-desktop": 4,
+        "grid-tablet": 3,
+        "grid-mobile": 2,
+        "rows": 1,
+        "show-vendor": false,
+        "show_view_all": false
       }
     },
     "events-calendar": {
@@ -249,6 +281,7 @@
         },
         "events-calendar-2": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "grid_image_size": "square",
             "day": 10,
@@ -396,8 +429,6 @@
   "order": [
     "image-slideshow",
     "quatation-promo-2",
-    "text-block",
-    "featured-collection",
     "quatation-promo",
     "video-video-hero",
     "quatation-promo-1",
@@ -405,6 +436,8 @@
     "image-image-with-text-1",
     "image-text-with-image-overlay-1",
     "products-featured-product-1",
+    "text-block",
+    "featured-collection",
     "events-calendar",
     "image-gallery",
     "text-text-adverts",

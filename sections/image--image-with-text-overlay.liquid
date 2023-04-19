@@ -57,7 +57,7 @@
 
             {% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %}
                 <div class="grid__item homepage-featured-content-box image-with-text-overlay__content-box">
-                    <div class="homepage-featured-content-box-inner show-on-scroll">
+                    <div id="img-text" class="homepage-featured-content-box-inner show-on-scroll">
                         {% if section.settings.title != blank %}
                             <div class="sitewide--title-wrapper">
                                 <h2 class="homepage-sections--title homepage-section-title" id="{{ section.id }}_title">
@@ -108,9 +108,12 @@
         }
 
         @media only screen and (min-width: 768px) {
-          .homepage-content--{{ section.id }} #rellax--{{ section.id }}.rellax.img {
-            height: calc(100% * 1.5);
-            margin-top: {{ section.settings.image_height | remove:'vw' | times:-0.25 | append:'vw' }};
+          .homepage-content--{{ section.id }}` #rellax--{{ section.id }}.rellax.img {
+            height: calc(100% * 1.23);
+            {% comment %}
+                margin-top: {{ section.settings.image_height | remove:'vw' | times:-0.25 | append:'vw' }}; 
+            {% endcomment %}
+            
           }
         }
 
@@ -141,7 +144,7 @@
 
                 {% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %}
                     <div class="grid__item homepage-featured-content-box image-with-text-overlay__content-box">
-                        <div class="homepage-featured-content-box-inner show-on-scroll">
+                        <div id="img-text-2" class="homepage-featured-content-box-inner show-on-scroll">
                             {% if section.settings.title != blank %}
                                 <div class="sitewide--title-wrapper">
                                   <h2 class="homepage-sections--title homepage-section-title"> 

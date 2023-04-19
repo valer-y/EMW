@@ -1,0 +1,99 @@
+<script>
+    if( ! localStorage.getItem('gatsby_verified') ) {
+
+    let body = document.getElementsByTagName('body')[0];
+    let restrictpopupWrapper = document.createElement('div');
+
+    restrictpopupWrapper.setAttribute('class', 'restricted-age--back');
+    restrictpopupWrapper.innerHTML = `
+        <div class="restricted-age--popup">
+            <h2 class="restricted-age--heading">Are you 18+ ?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ultrices nisl ac porta. Mauris ac malesuada diam, eu laoreet ipsum. Suspendisse pulvinar elit nunc, non ornare elit congue sit amet. </p>
+            <div class="restricted-age--buttons-block">
+                <div onclick="history.back()" class="restricted-age--buttons no-btn">No</div>
+                <div class="restricted-age--buttons yes-btn">Yes</div>
+            </div>
+        </div>
+    `;
+
+    body.prepend(restrictpopupWrapper);
+
+    body.setAttribute('class', 'stop-scroll');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        let restrictYesBtn = document.getElementsByClassName('restricted-age--buttons yes-btn')[0];
+        let restrictPopupWrapper = document.getElementsByClassName('restricted-age--back')[0];
+        console.log(restrictYesBtn);
+        restrictYesBtn.addEventListener('click', () => {
+            localStorage.setItem('gatsby_verified', '1');
+            restrictPopupWrapper.outerHTML = '';
+            
+            if( body.classList.contains('stop-scroll') ) {
+                body.classList.remove('stop-scroll');
+            }
+        });
+    });
+
+}
+</script>
+
+<style>
+    :root {
+    --restricted-back__color: rgba(255, 255, 255, 0.7);
+    --restricted-popup__padding: 50px 40px;
+    --restricted-popup__btn-color: rgb(172, 172, 172);
+    --restricted-popup__btn-color__active: black;
+    --restricted-popup__btn-text-color: white;
+
+    }
+
+    .restricted-age--back {
+        z-index: 1000000;
+        background-color: var(--restricted-back__color); 
+        width: 100vw; 
+        height: 100vh; 
+        position: absolute; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .restricted-age--popup {
+        width: 400px; 
+        max-height: 400px;
+        background-color: white; 
+        border: var(--restricted-popup__border);
+        padding: var(--restricted-popup__padding);
+        box-shadow: 10px 5px 25px rgba(0, 0, 0, 0.55);
+    }
+
+    .restricted-age--buttons-block {
+        display: flex;
+    }
+
+    .restricted-age--buttons {
+        background-color: var(--restricted-popup__btn-color);
+        color: var(--restricted-popup__btn-text-color);
+        font-weight: 600;
+        padding: 10px 30px;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+
+    .restricted-age--buttons:hover {
+        background-color: black;
+    }
+
+    .restricted-age--buttons:first-child {
+        margin-right: 10px;
+    }
+
+    .stop-scroll {
+        overflow-y: hidden;
+    }
+
+    /* Text */
+    .restricted-age--heading {
+        margin-top: 0;
+    }
+</style>
